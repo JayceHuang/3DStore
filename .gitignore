@@ -1,0 +1,11 @@
+bin/
+gen/
+obj/
+build/
+.gradle/
+.idea/
+.settings/
+proguard/
+*.apk
+*.iml
+3D_Store/project.properties

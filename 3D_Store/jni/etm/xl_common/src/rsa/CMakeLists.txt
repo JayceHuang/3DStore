@@ -1,0 +1,2 @@
+AUX_SOURCE_DIRECTORY(. SRC_FILES)
+add_library(rsa OBJECT ${SRC_FILES})

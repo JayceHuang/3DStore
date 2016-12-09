@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lichen.niceslim.MainActivity$PlaceholderFragment">
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/rl_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <GridView
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        android:listSelector="@android:color/transparent"
+        android:verticalSpacing="15dip"
+        android:horizontalSpacing="6dp"
+        android:id="@+id/gv_detail_about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:numColumns="3" />
+
+</LinearLayout> 

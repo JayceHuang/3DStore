@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <!-- Used in View/Spinner1.java -->
+    <string-array name="home_tabs">
+        <item>首頁</item>
+        <item>電影</item>
+        <item>遊戲</item>
+        <item>應用</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="search_tabs">
+        <item>綜合</item>
+        <item>視頻</item>
+        <item>遊戲</item>
+        <item>應用</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="video_resolution">
+        <item>高畫質</item>
+        <item>超高畫質</item>
+    </string-array>
+    
+    <string-array name="regist_head_type">
+        <item>手機註冊</item>
+        <item>電子郵件註冊</item>
+    </string-array>
+    
+    <string-array name="my_wallet_head_type">
+        <item>購買記錄</item>
+        <item>充值記錄</item>
+        <item>贈送記錄</item>
+    </string-array>
+    
+    <string-array name="my_video_head_type">
+        <item>播放記錄</item>
+        <item>本機暫存</item>
+    </string-array>
+    <string-array name="login_head_type">
+        <item>手機登入</item>
+        <item>電子郵件登入</item>
+    </string-array>
+    
+    <string-array name="reget_pwd_type">
+        <item>手機找回</item>
+        <item>電子郵件找回</item>
+    </string-array>
+    
+    <string-array name="task_tabs">
+        <item>下載任務</item>
+        <item>更新</item>
+    </string-array>
+</resources>

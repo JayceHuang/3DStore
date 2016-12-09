@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white_back_ground" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/message_text_color"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_play_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/play_setting"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/pq_precedence_text"
+                        style="@style/style_setting_left"
+                        android:text="@string/play_setting_first_select_high" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_first_play_high"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:gravity="right"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_black"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_select_super_high"
+                        style="@style/style_setting_left"
+                        android:text="@string/play_setting_first_select_super_high" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_select_superhight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_game_header_title"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/message_text_color"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_game_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/game_settting"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_game_header_subtitle"
+                style="@style/style_setting_left"
+                android:layout_marginTop="8dp"
+                android:text="@string/game_setting_message"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_game_header_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_game_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dp"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/checkbox_game_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/single_select_toggle_button_selector"
+                        android:paddingRight="9dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="9dp"
+                        android:layout_toLeftOf="@+id/checkbox_game_setting"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/open_3d_play_game"
+                            style="@style/style_setting_left"
+                            android:text="@string/game_setting_tip"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_black"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/message_text_color"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_network_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/network_setting"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_no_wifi_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/style_setting_left"
+                        android:text="@string/no_wifi_play"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_mobile_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/single_select_toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_black"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_mobilenet_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/style_setting_left"
+                        android:text="@string/no_wifi_download"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_mobile_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/single_select_toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- 缓存设置 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/message_text_color"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_download_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/download_setting"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/download_high_first_text"
+                        style="@style/style_setting_left"
+                        android:text="@string/download_setting_first_select_high" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_download_high_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_black"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/download_superhigh_first_text"
+                        style="@style/style_setting_left"
+                        android:text="@string/download_setting_first_select_super_high" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_download_superhigh_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_is_auto_delete_apk"
+                    style="@style/style_setting_left"
+                    android:text="@string/delete_after_install" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_is_auto_delete_apk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/single_select_toggle_button_selector"
+                    android:paddingRight="9dip" />
+            </RelativeLayout>
+
+            <!-- 音轨 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/message_text_color"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/audio_track_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/audio_track_setting"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_setting_left"
+                android:layout_marginTop="8dp"
+                android:text="@string/audio_setting_first_local_message"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/check_box_audio_orin_text"
+                        style="@style/style_setting_left"
+                        android:text="@string/audio_setting_first_orin" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_audio_orin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_black"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/checkbox_audio_local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="9dp"
+                        android:layout_toLeftOf="@id/checkbox_audio_local"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/check_box_audio_local_text"
+                            style="@style/style_setting_left"
+                            android:text="@string/audio_setting_first_local" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 字幕 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="3dip"
+                    android:layout_height="15dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@color/message_text_color"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_caption_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:text="@string/caption_setting"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/check_box_download_cn_text"
+                        style="@style/style_setting_left"
+                        android:text="@string/download_setting_first_ch" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_download_ch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line_black"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@drawable/bg_setting_ltem_selector"
+                    android:gravity="left|center"
+                    android:minHeight="48dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/check_box_download_en_text"
+                        style="@style/style_setting_left"
+                        android:text="@string/download_setting_first_en" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_download_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingRight="9dip" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLoginOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/button_red_selector"
+                android:text="@string/loginout"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

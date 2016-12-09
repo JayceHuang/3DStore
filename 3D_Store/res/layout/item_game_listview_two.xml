@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        layout="@layout/view_game_cut_title" />
+
+    <com.runmit.sweedee.view.DetailGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:focusable="false"
+        android:horizontalSpacing="11dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:scrollbars="none" />
+
+</LinearLayout>

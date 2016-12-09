@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="partner_id">0x11300001</string>
+    <string name="app_name">3D Store</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="login">Log In</string>
+    <string name="login_and_regist">Log In/Sign Up</string>
+    <string name="login_password">Enter password</string>
+    <string name="player_exit_in_3g">Not in WLAN,backgroud player has quit</string>
+    <string name="player_exit_in_wifi_to_3g">Not in WLAN,stop playing to protect your data fees.</string>
+    <string name="player_in_3g">Not in WLAN,considering the data fee,it is recommended that you play in WLAN</string>
+    <string name="player_switching_video">Switching definition</string>
+    <string name="player_switching_video_resouce">Switching video resource</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="has_no_using_network">No available network</string>
+    <string name="no_found_sdcard">SD card is not loaded</string>
+
+    <!-- 设置部分相关 -->
+    <string name="no_wifi_stop_download">2G/3G/4G data protection is open,whether to change the settings?</string>
+    <string name="more">Settings</string>
+    <string name="please_enter_account">Enter your account and password</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="regist_account">Sign Up</string>
+    <string name="flow_next_show">Do not ask me any more</string>
+
+    <!-- 菜单项显示 -->
+    <string name="delete_tasks_confirmation">Delete Message</string>
+    <string name="aboutus">About Us</string>
+    <string name="commit">Submit</string>
+    <string name="about_blank">file:///android_asset/about_blank.html</string>
+    <string name="click_login"><u>Click to login</u></string>
+    <string name="play_record">Watched Records</string>
+    <string name="pay_history">Purchased Records</string>
+
+    <!-- 新通用对话框 -->
+    <string name="operate_delete">Delete</string>
+    <string name="pull_to_refresh_pull_label">Pull down to refresh</string>
+    <string name="pull_to_refresh_release_label">Release to refresh</string>
+    <string name="pull_to_refresh_refreshing_label">Refreshing\u2026</string>
+    <string name="ptr_last_updated">Updating: {0}</string>
+    <string name="edit">Edit</string>
+    <string name="confirm_title">Message</string>
+    <string name="redo">Retry</string>
+    <string name="fetching_video_name">Fetching the name of video</string>
+    <string name="re_play">Replay</string>
+    <string name="continue_play_tip">Played</string>
+    <string name="watch_to">Played to</string>
+    <string name="pay_movie">Purchased movie</string>
+    <string name="pay_method">Payment</string>
+    <string name="pay_commit">Pay</string>
+    <string name="agree_and_regist">Regist</string>
+    <string name="regist_email">Email:</string>
+    <string name="login_account">Account:</string>
+    <string name="regist_nicky">NickName:</string>
+    <string name="phone_regist_nicky">NickyName:</string>
+    <string name="regist_password">Password:</string>
+    <string name="phone_regist_password">Password:</string>
+    <string name="regist_edit_email_hint"></string>
+    <string name="regist_edit_nicky_hint">4&#8211;16 characters</string>
+    <string name="regist_edit_password_hint">6&#8211;12 letters/numbers</string>
+    <string name="regist_select_location">Region:</string>
+    <string name="phone_regist_select_location">Region:</string>
+    <string name="regist_perrmision">3D Store user agreement</string>
+    <string name="regist_send_verify_code">Get verifycode</string>
+    <string name="reget_send_verify_code">Resend({0})</string>
+    <string name="regist_input_phone"></string>
+    <string name="regist_verify_code">VerifyCode:</string>
+    <string name="regist_edit_verify_code_hint">Enter verifycode</string>
+    <string name="battery">Electricity</string>
+    <string name="suggest">Suggestion</string>
+    <string name="play_setting">Play settings</string>
+    <string name="download_setting">Cache/Download</string>
+    <string name="network_setting">Network</string>
+    <string name="caption_setting">Subtitle</string>
+    <string name="audio_track_setting">AudioTrack</string>
+    <string name="play_setting_first_select_high">Priority 720P</string>
+    <string name="play_setting_first_select_super_high">Priority 1080P</string>
+    <string name="install_after_download">Automatically Install App once downloaded</string>
+    <string name="delete_after_install">Delete APK once APP is installed</string>
+    <string name="audio_setting_first_orin">Priority Original Audio</string>
+    <string name="audio_setting_first_local">Priority System Language Audio</string>
+    <string name="download_setting_first_select_high">Priority 720P</string>
+    <string name="download_setting_first_select_super_high">Priority 1080P</string>
+    <string name="game_settting">Game Setting</string>
+    
+    <string name="download_setting_first_ch">Chinese</string>
+    <string name="download_setting_first_en">English</string>
+    <string name="loginout">Log Out</string>
+    <string name="setting">Settings</string>
+    <string name="all_game">All Game</string>
+    <string name="video_intro">Synopsis</string>
+    <string name="video_comment">Comment</string>
+    <string name="no_wifi_play">Play in 2G/3G/4G</string>
+     <string name="game_setting_tip">Open 3D visual</string>
+    <string name="no_wifi_download">Cache in 2G/3G/4G</string>
+    <string name="user_center">Me</string>
+    <string name="check_update">Check Update</string>
+    <string name="qq_group_by_app">QQ Group:</string>
+    <string name="email_group_by_app">Email:</string>
+    <string name="conpany_info">3D Store Ltd. All Rights Reserved.</string>
+    <string name="copyright">Copyright ©2015 3D Store ALL Rights Reserved</string>
+    <string name="current_version">Version:%1$s</string>
+    <string name="no_play_record_tip">No watched records</string>
+    <string name="no_network_movie">Failed to get data!</string>
+    <string name="no_purchase_record_tip">No purchased records</string>
+    <string name="detail_movie_prevue">Trailer</string>
+    <string name="select_location">Region</string>
+    <string name="download_cancle">Have caching task,confirm to exit?</string>
+    <string name="real_quit">Exit</string>
+    <!-- 搜索页 -->
+    <string name="search">Search</string>
+    <string name="none_current">Not available</string>
+    <string name="searching">Searching&#8230;</string>
+    <string name="fetch_data_error">Failed to get data!</string>
+    <string name="search_history_tit">Search History</string>
+    <string name="clear_search_history_tit">Delete all</string>
+    <string name="title_activity_search_resource">Search resources</string>
+    <string name="search_resource_input_box_hint">Enter search keywords</string>
+    <string name="search_resource_query_failed">Error!please retray later</string>
+    <string name="search_resource_info_no_network">Please check network</string>
+    <string name="search_resource_query_found_nothing_info">No search results~</string>
+    <string name="search_resource_info_input_is_null">The input can not be empty,please enter again</string>
+    <string name="search_resource_activity_hotword_header_title">Popular search</string>
+    <string name="search_resource_info_input_excceed_max_num">Input to the limit</string>
+
+    <!-- 缓存页 -->
+    <string name="download_app_init">Download</string>
+    <string name="download_app_running">Downloading</string>
+    <string name="download_app_paused">Paused</string>
+    <string name="download_app_failed">Failed</string>
+    <string name="download_app_open">Open</string>
+    <string name="download_app_install">Install</string>
+    <string name="game_download">Download</string>
+    <string name="deleting_task">Deleting&#8230;</string>
+    <string name="deleting_task_failed">Delete failed</string>
+    <string name="file_no_exist">The file does not exist!</string>
+    <string name="confirm_delete_msg">Are you sure to delete?</string>
+    <string name="sdcard_full_failed">The operation failed,the disk is full</string>
+    <string name="sdcard_full_failed_2">Cache failed,the disk is full!</string>
+    <string name="no_download_record_msg">No cached records</string>
+    <string name="fetching_download_list_msg">Getting the local list</string>
+    <string name="local_space_size">Memory space:Only %1$s/%2$s</string>
+    <string name="download_tast_success">Caching successful</string>
+    <string name="download_tast_file_already_exist">The task has been in existence </string>
+    <string name="download_tast_already_exist">The video has been in existence</string>
+    <string name="download_tast_acces_permission_denied">SD card error,unable to cache!</string>
+    <string name="download_tast_maxsize_failed">Creat a task failed,can not support files larger than 4G</string>
+    <string name="download_tast_error_info">Sorry,the video can not be cached</string>
+    <string name="download_tast_default_err">Creat a task failed,error:{1}</string>
+    <string name="download_waitting">Waitting</string>
+    <string name="download_paused">Pause</string>
+    <string name="download_failed">Cache failed</string>
+    <string name="create_file_failed">Creat task failed</string>
+    <string name="write_file_failed">Write file failed</string>
+    <string name="read_file_failed">Read file failed</string>
+    <string name="sdcard_no_space">Deficiency of\n storage space</string>
+
+    <!-- 首页 -->
+    <string name="douban_user">douban users</string>
+
+    <!-- 详情页 -->
+    <string name="data_null_and_wait_for_server">No data,please waitting for a moment.</string>
+    <string name="video_detail">Film details</string>
+    <string name="movie_director">Director:</string>
+    <string name="movie_actors">Actors:</string>
+    <string name="movie_genres">Genres:</string>
+    <string name="movie_year">Year:</string>
+    <string name="detail_activity_play"> Play </string>
+
+    <!-- 用户上报 -->
+    <string name="suggest_hint">Please enter your suggestion&#8230;</string>
+    <string name="contact_hint">Please enter your contact information</string>
+    <string name="submit_success">Submit success,thank you!</string>
+    <string name="submit_failed">Submit failed,please try again.</string>
+    <string name="submit_empty_tip">Please enter your suggestion!</string>
+    <string name="submit_max_check_tip">Sorry,input has reached the maximum limit</string>
+    <string name="feedback_submitting">Submiting&#8230;</string>
+    <string name="permission_opening">Agreement&#8230;</string>
+    <string name="no_albumid">Source id is error</string>
+    <string name="login_state_unavailable">Account sign out, because your account has login another device</string>
+
+    <!-- 设置项 -->
+    <string name="logout_processing">Log out&#8230;</string>
+
+    <!-- 通用 词汇&提示 -->
+    <string name="wait">Waiting</string>
+    <string name="change_resource">Change resource</string>
+    <string name="other_error">Other error</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="no_net_connection">No network connection</string>
+    <string name="select_all">All</string>
+
+    <!-- 登录 -->
+    <string name="login_username_limit">The user name cannot exceed 40 characters</string>
+    <string name="login_password_limit">The password cannot exceed 16 characters</string>
+    <string name="login_ing">Logining&#8230;</string>
+    <string name="no_network_toast">No network connection,please check the network!</string>
+    <string name="login_success">login successful</string>
+    <string name="loginerr_timeout_with_retrytip">Logging timeout,please check your network and try again.error code:</string>
+    <string name="loginerr_unknown_error">Logging failed,unknown error.error code:</string>
+    <string name="logout_succeed">Logout successful</string>
+
+    <!-- 注册 -->
+    <string name="regist_success_and_send_email_fail">Registration is successful, but we failed to send the activation email, for your account security, we recommend replacing the account</string>
+    <string name="regist_success">Regist succeed</string>
+    <string name="regist_fail_verifycode_timeout">Regist failed,verifycode is timeout.error code:</string>
+    <string name="regist_fail_device_limit">Regist failed,number of accounts binding this device exceeds the limit</string>
+    <string name="regist_fail_email_already_regist">Regist failed,your email address has registed,please change your email address.</string>
+    <string name="regist_fail_verifycode_error">Regist failed,verifycode failed,error code:</string>
+    <string name="regist_fail_bind_device_error">Regist failed,binding device error,error code:</string>
+    <string name="regist_fail_default">Regist failed,please try again,error code:</string>
+    <string name="regist_invalidate_email">Please enter a valid email address</string>
+    <string name="regist_invalidate_verifycode">Please enter the verifycode</string>
+    <string name="regist_invalidate_password">Please enter a valid telephone number</string>
+    <string name="regist_psw_contain_chinese">The passwords can not contain chinese</string>
+    <string name="regist_psw_contain_special_word">The password contains special characters,please input numbers or letters and try again.</string>
+    <string name="regist_nicky_invalidate">Please input 2 to 8 chinese characters or 4 to 16 characters nickname</string>
+    <string name="regist_password_invalidate">Please input 6 to characters password</string>
+    <string name="regist_ing">Registering</string>
+    <string name="regist_fail_phonenumber_already_regist">Regist failed, your telephone number has registed,please log in or change the telephone number</string>
+    <string name="regist_fail_get_verifycode_error">Get the verifycode failed,please try again.</string>
+	
+    <!-- 找回密码 --> 
+	<string name="reget_password">Recover password</string> 
+	<string name="account_not_found">The account does not exist</string>
+	<string name="sending_verify_code">Sending verifycode</string> 
+	<string name="pwd_modify_error">Reset password failed</string> 
+	<string name="pwd_not_match_error">The two passwords do not match</string> 
+	<string name="send_phone_msg">The verifycode has been sent to your phone{0}</string> 
+	<string name="input_identifying_code">Please input the verifycode you got</string>
+	<string name="next_step">Next</string>
+	<string name="pwd_reset_success">Reset password successful</string>
+	<string name="reget_pwd_tip_close">Please close this page and login with your new password</string>
+	<string name="get_identifying_code">Get verifycode</string> 
+    <string name="pwd_new_hint1">New password, 6-12 digits or letters</string>
+    <string name="pwd_new_hint2">Confirm your new password</string>
+    <string name="close">close</string>
+    <string name="pwd_new_tips">please input the new password</string>
+    <string name="pwd_confirm_tips">please input new password again</string>
+    
+    <!-- 支付 -->
+    <string name="pay_get_may_method_fail">Get the payment failed.Please try agagin.</string>
+    <string name="pay_get_order_fail">Get orders failed,please try again.Error code:</string>
+    <string name="pay_price_null">The price of the good is empty. </string>
+    <string name="pay_get_pay_method_ing">It is getting the payment.</string>
+    <string name="pay_create_order_ing">It is generating order.</string>
+    <string name="pay_success_dialog_message">Pay succeed!Enjoy 3D life!</string>
+    <string name="pay_fail_dialog_message">Sorry,pay failed,please try again later.</string>
+    <string name="pay_result_dialog_title">Buying Tips</string>
+    <string name="pay_fail_dialog_message_and_rtncode">Sorry,pay failed,please try again later.error code:</string>
+    <string name="pay_opreate_succeed">Operate succeed</string>
+    <string name="pay_system_error">System error.</string>
+    <string name="pay_user_not_allowed">Payment accounts have been frozen or not allowed to pay</string>
+    <string name="pay_user_unbinded">Your account has unbinded</string>
+    <string name="pay_data_format_error">Data format is invalid</string>
+    <string name="pay_notbind_or_binderror">Bind failed or has no binded.</string>
+    <string name="pay_order_pay_failed">Pay order failed</string>
+    <string name="pay_rebind_account">Bind the account again</string>
+    <string name="pay_servece_upadating">Pay services is upgrading</string>
+    <string name="pay_user_cancel">Users midway cancel the payment operations</string>
+    <string name="pay_web_pay_failed">Pay in webpage failed</string>
+    <string name="zhifubao">(Alipay)</string>
+
+    <!-- 点播 &下载部分 -->
+    <string name="normal_resolution">SD-SDI</string>
+    <string name="play_neterror_and_trylater">Network error,please try again later.</string>
+    <string name="play_nettimeout_and_trylater">Network timeout,please try again later.</string>
+    <string name="play_get_playurl_failed">Sorry, get the resources address failed.</string>
+    <string name="play_loading_url">Loading the playing url</string>
+    <string name="download_app_url">Loading the download url</string>
+    <string name="paly_net_is_bad_and_change_source">Your network is poor, exit or Switch?</string>
+    <string name="paly_net_is_bad_and_wait_tip">Your network is poor, exit or Waiting?</string>
+    <string name="play_last_play_to">Last watched to</string>
+    <string name="play_loading_movie">Loading the movie</string>
+    <string name="play_complete">Play complete</string>
+    <string name="playerr_service_died">Play service died.</string>
+    <string name="playerr_source_error">Resources error, unable to play.</string>
+    <string name="download_loading_url">Get cache url&#8230;</string>
+    <string name="application_crash_toast">Sorry, abnormal procedures, app is about to exit, please contact us to feedback problems.</string>
+    <string name="load_caption_fail">Load subtitles failed, please try again.</string>
+    <string name="press_again_to_exit_app">Click the Back button again to exit the application.</string>
+    <string name="to3d">TO3D</string>
+    <string name="gameconfig_updated_tip">{0} Game config update complete!</string>
+    <string name="gameconfig_updated_tip_error"> Game config update failed!</string>
+    <string name="find_gameconfig_tip">{0} Games can be transformed into 3D visual,need to transform?</string>
+    <string name="gameconfig_update">Yes</string>
+    <string name="my_threedgame">3D Games</string>
+    <string name="my_threedapp">3D Apps</string>
+    <string name="choiceness">Featured</string>
+    <string name="no_App_record_tip">You have not installed any application</string>
+    <string name="no_Game_record_tip">You have not installed any game</string>
+    <string name="movie_minText"> Minute </string>
+    <string name="cash_pay">Cash Payment</string>
+    <string name="wallet_pay">Wallet to pay</string>
+    <string name="pay_toast">Purchase Information:</string>
+    <string name="pay_agreement">After purchase, you can play the film in local once the cache is complete with 72 hours ,if you want to play the film 72 hours later ,re-cache it please.</string>
+    <string name="wallet_pay_dialog_message">Account Balance:¥{0}</string>
+    <string name="wallet_pay_money_pool">Your account balance is insufficient</string>
+    <string name="recharge">Recharge</string>
+    <string name="get_wallet_fail_and_not_allow_pay">Access to the account balance failed, temporarily unable to pay by this way.</string>
+    <string name="rechare_amount">Recharged amount</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="account_balance">{0} drips</string>
+    <string name="my_wallet_msg">Account Records</string>
+    <string name="task_over_due_toast_msg">Sorry,according to copyright request, you can not play the downloaded film 3 days later , you have to re-download.</string>
+    <string name="re_download">Re-download</string>
+    <string name="usercenter_account_balance">{0}</string>
+    <string name="need_login_to_get_play_record">Need to Login</string>
+    <string name="user_no_login">You have to login to recharge</string>
+
+    <!-- 搜索部分 -->
+    <string name="installNums">Installed</string>
+    <!-- 应用详情 -->
+    <string name="appdetail_download_error">Download failed</string>
+    <string name="appdetail_launch_app">Open</string>
+    <string name="appdetail_download_app">Download</string>
+    <string name="appdetail_install_app">Install</string>
+    <!-- 应用详情 xml -->
+    <string name="appdetail_title">Details</string>
+    <string name="appdetail_install_text">Install:</string>
+    <string name="appdetail_size_text">Size:</string>
+    <string name="appdetail_filetype_text">Type:</string>
+    <string name="appdetail_desc_text">Description:</string>
+    <string name="appdetail_news_text">News:</string>
+    <string name="appdetail_version_text">Version:</string>
+    <string name="appdetail_developer_text">Application Developers:</string>
+    <string name="appdetail_update_text">Update Time:</string>
+    <string name="appdetail_update_v_text">Update Version:</string>
+    <string name="appdetail_apptype_text">Application Type:</string>
+    <string name="appdetail_filesize_text">Size:</string>
+    
+    <string name="virtual_money_pay">Drip pay</string>
+    <string name="remain_virtual_money_pay">Remaining drips:</string>
+    <string name="pay_movie_need_virtual_money_title">Hi,you need to consume {0} drips for the movie</string>
+    <string name="pay_movie_need_virtual_money_msg">Remaining:{0}drips</string>
+    <string name="pay_movie_need_virtual_money_not_enough">Oh sorry,you have less the remaining drips</string>
+    <string name="regist_and_login_success_send_virtual_money_msg">{0}drips already presented to you</string>
+    <string name="sorry_get_wallet_is_null">Sorry, failed to obtain wallet, temporarily unable to play this video</string>
+    <string name="present_money">Present{0}drips</string>
+    
+    
+    <!-- 搜索页 -->
+    <string name="search_result_type_movie">Videos</string>
+    <string name="search_result_type_game">Games</string>
+    <string name="search_result_type_app">Apps</string>
+    <string name="search_rec_type_movie">Video</string>
+    <string name="search_rec_type_game">Game</string>
+    <string name="search_rec_type_app">App</string>
+    <string name="stereo_movie">3DVideos</string>
+    <string name="stereo_game">3DGames</string>
+    <string name="stereo_app">3DApps</string>
+    <string name="pay_waiting">In the process of payment,please try again later</string>
+    <string name="my_3d_movie">My 3DVideos</string>
+    <string name="phone">Enter the phone number</string>
+    <string name="email">Enter the email</string>
+    <string name="first_download_gameconfig_tip">1.After  install the game from 3D Store ,you have to open the game by click the button on the 3D Store,then you can see the 3D visual \n\n2.To switch 2D/3D visual effect, please go to Mine-More-Game Setting</string>
+   	<string name="launch_game_without_3d_tip">The game has not yet been converted to 3D visual, will launch with 2D visual.</string>
+   	<string name="known">Got it</string>
+   	<string name="no_recharge_record_tip">You have not any recharge record</string>
+	<string name="install_player_msg">Sorry,3DPlayer is not installed on your phone,please install now</string>
+	<string name="reminder">Reminder</string>
+	<string name="agree">Agree</string>
+	<string name="networkrecharge_msg">Hi, Dear user:\n\nWelcome to use 3D Store.
+When you use 3D Store to play videos, cache videos, download apps, get information or
+pictures in 2G/3G/4G network environment, your network operator will charge a fee of data
+traffic. Please use 3D Store in WLAN network environment as far as possible.
+\tIn order to provide you with comprehensive services, the App needs the following permissions:\n
+1. Access to the Internet or WLAN networks to provide you with video playing, downloading, App downloading, and other services.\n
+2. Use the phone camera to provide you with 3D visual effects.\n
+3. Get the approximate location information of the mobile phone to read the address information on the phone.\n
+4. Read the phone IMEI, IMSI, MAC address information to automatically obtain the phone\'s basic data.\n
+5. Read, modify or delete your SD card data to provide you with local video playback, editing and other services.\n
+For any dispute of the software produced, you agree to an amicable settlement; if the negotiation fails, you agree 
+to submit the dispute to the Shenzhen Arbitration Commission for arbitration in Shenzhen.
+</string>
+	<string name="loginerr_ssl_error">Login failed, certificate validation error, please check your system time is accurate or check whether the network is secure and try again.</string>
+    <string name="regist_fail_get_verifycode_error_ssl_error">Get the code failed, certificate validation error, please check your system time is accurate or check whether the network is secure and try again.</string>
+    <string name="regist_ssl_error_toast">Registration failed, the certificate validation error, please check your system time is accurate or check whether the network is secure and try again</string>
+    
+    <string name="register_nickname_tip">Nickname can not be changed after registration</string>
+	<string name="register_invalid_email_tip">Account password can not be recovered if the registration of non-real mailbox</string>
+	<string name="open_three_d">3D on</string>
+	<string name="disable_three_d">3D off</string>
+	<string name="has_pay">Purchased</string>
+	<string name="enable3d_fail_the_flashlight_isopen">Open the 3D effect fails, please allow 3D Store permission to use the phone camera and try again!</string>
+	<string name="gaimeopen_fail_the_flashlight_isopen">Open the 3D game fails, please allow 3D Store permission to use the phone camera and try again!</string>
+    <string name="testmode_tip">Entering Test Mode, the application will clean cache data of the disk, please restart the application manually</string>
+	<string name="testmode_no_tip">Quitting Test Mode, the application will clean cache data on the disk, please restart the application manually</string>
+	<string name="testmode">Test Mode</string>
+	
+	<string name="manager_pay_password">Payment password management</string>
+	<string name="setting_pay_password">Set payment password</string>
+	<string name="change_pay_password">Modify payment password</string>
+	<string name="forget_pay_password">Forgot payment password</string>
+	<string name="forget_login_password">Forgot login password</string>
+	<string name="please_end_old_password">To verify your identity, please enter your old password.</string>
+	<string name="please_end_new_password"><![CDATA[<font color="#1e91eb">Please set payment password (composed of 6 numbers)</font>]]></string>  
+	<string name="please_end_new_password_for_what">So it can be used in the safe authentication before transaction </string>  
+	
+	<string name="please_ensure_new_password">Please enter the same password again to verify that you have typed it correctly. </string>
+	<string name="password_is_too_young_too_simple">You entered a password that consists of 6 same characters, which is considered too weak. </string>
+	<string name="ensure_cancel_setting_password">Do you really want to give up setting payment password?</string>
+	<string name="ensure_cancel_change_password">Do you really want to give up modifying payment password?</string>
+	<string name="ensure_cancel_reget_pay_password">Do you really want to give up requesting payment password?</string>
+	<string name="two_password_is_not_the_same">The two passwords you entered did not match. Please try again.</string>
+	<string name="pay_password_set_success">Payment password setup is successful</string>
+	<string name="pay_password_error">Invalid payment password. Please try again.</string>
+	<string name="enter_login_password_check_account">To verify your identity, please enter your login password.</string>
+	<string name="login_password_is_incorrect">Invalid login password. Please try again.</string>
+	<string name="english_origin_sound">Original English</string>
+	<string name="please_enter_pay_password">Please enter you payment password</string>
+	<string name="pay_to_bug_product_name">Purchasing the movie 《{0}》</string>
+	<string name="welcome_to_user_sweedee_wallet">Welcome to use 3D Store wallet.</string>
+	<!-- 热词 -->
+	<string name="moviecatalog_no_data_info">There is no eligible data yet~</string>
+	<string name="free_buy">Free</string>
+	<string name="click_to_retry">Request failed. Please try again.</string>
+    <string name="loading_more">More</string>
+    <string name="no_give_record_tip">You do not have any gift record yet.</string>
+    <string name="pay_waiting_dialog_message_and_rtncode">Confirming the payment result, please wait...</string>
+    <string name="phone_regist_sexy">Gender:</string>
+    <string name="sexy_male">Male</string>
+    <string name="sexy_female">Female</string>
+    <string name="sexy_unknow">Other</string>
+    <string name="audio_setting_first_local_message">Using current system language as default audio settings, you can also select original dubbing. </string>
+    <string name="game_setting_message">Luanching games from 3D Store will be with 3D effect as default. Switching the setting can get rid of the effect. </string>
+    <string name="download_app_update">update</string>
+    <string name="download_app_wait_down">waiting to download</string>
+    <string name="loginerr_password_account_error_with_tip">Incorrect username or password. Please try again.</string>
+    <string name="loginerr_user_toomuch_device_login">Too many account on this device!Please unbind your account from other device or try another account.</string>
+    <string name="regist_fail_email_invalidate">Registration failed. Invalid E-mail address. Please change your E-mail. Error code:</string>
+    <string name="verify_code_error_toast">Invalid varification code. Please try again.</string>
+    <string name="pay_get_recharge_quota">Requesting recharge balance failed. Pelase try again. </string>
+    <string name="recharge_result_dialog_title">Recharge tips</string>
+    <string name="recharge_result_dialog_message">Recharged successfully</string>
+    <string name="pay_password_error_retry">Payment password error，you can try %1$s times。</string>  
+	<string name="pay_password_error_lock">Payment password error frequently has been locked, ten minutes and try again.</string> 
+	<string name="moviecatalog_hotword_filter">Filters</string>
+	
+	<string name="download_app_resume">Continue</string>
+    <string name="download_app_retry">Retry</string>
+	<string name="taskandupdate">Downloads and Updates</string>
+    <string name="taskmanager_emptytip">You have not any download tasks</string>
+    <string name="taskupdate_emptytip">Your games and applications are the latest version</string>
+    <string name="taskupdate_emptytip_snail">Your applications are the latest version</string>
+    <string name="confirm_delete_task">You sure you want to delete this task?</string>
+    <string name="taskmanager_deletelocalfile">Delete the local file</string>
+    <string name="taskmanager_tip_install">The download is complete, wait for the installation</string>
+    <string name="taskmanager_tip_retry"><![CDATA[<font color="#f83f3f">Download failed, please try again</font>]]></string>
+    <string name="taskmanager_tip_wait">Wait for download</string>
+    <string name="taskmanager_tip_openvideo">Successful download, open the video</string>
+    <string name="taskmanager_tip_openapp">Has been installed, open the app</string>
+    <string name="taskmanager_version_text">Version：%1$s</string>
+    
+    <string name="videodetail_uploader">Video Provider:</string>
+</resources>

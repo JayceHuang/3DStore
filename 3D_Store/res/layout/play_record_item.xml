@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/seletor_myvideolist_item">
+    
+    <View 
+      android:id="@+id/lineStart"
+      android:visibility="invisible"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/cut_line_color"/>
+    <FrameLayout
+        android:id="@+id/pic_fl"
+		android:layout_marginTop="14dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="159dp"
+     	android:layout_height="86dp" >
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        	android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_movie_image" />
+    </FrameLayout>
+    
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/textview_shadow_style"
+        android:layout_alignTop="@+id/pic_fl"
+        android:layout_toRightOf="@+id/pic_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text=""
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+    
+    <TextView
+        android:id="@+id/time"
+        style="@style/textview_shadow_style"
+        android:layout_toRightOf="@+id/pic_fl"
+        android:layout_above="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/message_text_color"
+        android:textSize="13dp" />
+    
+    <TextView
+        android:id="@+id/tv_info"
+        style="@style/textview_shadow_style"
+        android:layout_toRightOf="@+id/pic_fl"
+        android:layout_alignBottom="@+id/pic_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/message_text_color"
+        android:textSize="13dp" />
+    
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pic_fl"
+        android:layout_alignLeft="@+id/pic_fl"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="2dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/check_click" />
+    
+    <View 
+        android:id="@+id/lineMid"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/pic_fl"
+        android:background="@color/cut_line_color"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="14dp"/>
+    <View 
+        android:id="@+id/lineEnd"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/pic_fl"
+        android:background="@color/cut_line_color"/>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/fly_poster_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movie_detail_item_grid_height" >
+
+        <ImageView
+            android:id="@+id/iv_item_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_banner_image"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/ic_score" >
+
+            <TextView
+                android:id="@+id/tv_commend_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="0.0"
+                android:textColor="@color/white_text_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/black_text_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_highlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/message_text_color"
+        android:textSize="13sp" />
+
+</LinearLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_back_ground" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/regist_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/list_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/select_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/bg_setting_ltem_selector"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_select_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/phone_regist_select_location"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textviewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@+id/tv_select_location"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="9dp"
+                    android:src="@drawable/drop_down_triangle_selector" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line_black"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/editTextLoginUsernameRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/regist_countrycode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="+86"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView_semicolon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/regist_countrycode"
+                    android:text=":" />
+
+                <Button
+                    android:id="@+id/btn_send_verification"
+                    android:layout_width="114dip"
+                    android:layout_height="33dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dip"
+                    android:background="@drawable/send_verifycode_selector"
+                    android:text="@string/regist_send_verify_code"
+                    android:textColor="@drawable/textview_regist_send_verifycode_selecter"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/btn_send_verification"
+                    android:layout_toRightOf="@+id/textView_semicolon"
+                    android:background="@null"
+                    android:hint="@string/regist_input_phone"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line_black"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/layoutverification"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_verify_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/regist_verify_code"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_erification"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@+id/tv_verify_code"
+                    android:background="@null"
+                    android:hint="@string/regist_edit_verify_code_hint"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+                </EditText>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line_black"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/editTextPswLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/regist_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/phone_regist_password"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/psw_switch_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="9dip"
+                    android:background="@drawable/ic_eye_off"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/psw_switch_layout"
+                    android:layout_toRightOf="@+id/regist_password"
+                    android:background="@null"
+                    android:hint="@string/regist_edit_password_hint"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+                </EditText>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line_black"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/editSexyLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/set_sexy_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/phone_regist_sexy"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSelectSexy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/set_sexy_Textview"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical" >
+
+                    <RadioButton
+                        android:id="@+id/radioButton_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingLeft="5dp"
+                        android:text="@string/sexy_male"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingLeft="5dp"
+                        android:text="@string/sexy_female" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_unknow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:button="@drawable/toggle_button_selector"
+                        android:paddingLeft="5dp"
+                        android:text="@string/sexy_unknow" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line_black"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/nicknameLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/regist_nicky"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/phone_regist_nicky"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextNick"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@+id/regist_nicky"
+                    android:background="@null"
+                    android:hint="@string/regist_edit_nicky_hint"
+                    android:inputType="textUri"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+                </EditText>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dip"
+            android:layout_marginTop="5dp"
+            android:text="@string/register_nickname_tip"
+            android:textColor="@color/title_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/agree_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dip"
+            android:text="@string/regist_perrmision"
+            android:textColor="@color/thin_blue"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/button_green_selector"
+            android:text="@string/agree_and_regist"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</ScrollView>

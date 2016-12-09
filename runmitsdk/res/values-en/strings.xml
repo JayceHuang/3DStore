@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+	<string name="no_found_new_ver">No update found</string>
+	<string name="is_lattest_ver">You have installed the latest version</string>
+	<string name="no_found_sdcard">SD card is not loaded</string>
+	<string name="update_failed">Update failed,please try again later!</string>
+	<string name="update_loading">Updating ({0}%)</string>
+	<string name="update_tip_titile">New Version:{0}</string>
+	<string name="update_show_msg_f">what\'s new:\n</string>
+	<string name="update">Update</string>
+	<string name="update_info">Update</string>
+	<string name="update_downloading">Downloading,please wait&#8230;</string>
+	<string name="cancel">Cancel</string>
+	<string name="update_fetching_msg">Getting updated information,please wait&#8230;</string>
+	<string name="ok">OK</string>
+	<string name="update_download_filesize">Update filesize:</string>
+	<string name="download_success_click_install">The download is complete, click install</string>
+	<string name="ignore_current_version">ignore this version</string>
+</resources>

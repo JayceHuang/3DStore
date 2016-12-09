@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- 详情页 119dip -->
+    <dimen name="detail_title_height">48dp</dimen>
+    <dimen name="detail_bg_height">255dip</dimen>
+
+</resources>

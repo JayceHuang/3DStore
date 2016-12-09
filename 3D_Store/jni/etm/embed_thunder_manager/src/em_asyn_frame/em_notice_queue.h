@@ -1,0 +1,13 @@
+#ifndef _EM_NOTICE_QUEUE_H_00138F8F2E70_200807092122
+#define _EM_NOTICE_QUEUE_H_00138F8F2E70_200807092122
+
+#include "asyn_frame/notice_queue.h"
+
+#define em_notice_queue_init notice_queue_init
+#define em_notice_queue_uninit notice_queue_uninit
+#define em_pop_notice_node pop_notice_node
+#define em_push_notice_node push_notice_node
+#define em_pop_notice_node_without_dealloc pop_notice_node_without_dealloc
+#define em_push_notice_node_without_alloc push_notice_node_without_alloc
+
+#endif

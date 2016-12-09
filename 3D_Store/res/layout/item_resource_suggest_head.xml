@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:paddingLeft="8dp"
+        android:paddingRight="9dp" >
+
+        <FrameLayout
+            android:id="@+id/slid_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/banner" >
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/blackplane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5.5dp"
+            android:layout_marginRight="5.5dp"
+            android:layout_marginTop="8dip"
+            android:background="@color/black" >
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/slid_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5.5dp"
+            android:paddingRight="5.5dp"
+            android:paddingTop="8dip" >
+
+            <ImageView
+                android:id="@+id/gallery_image"
+                android:layout_width="332dp"
+                android:layout_height="156dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_gallery" />
+
+            <RelativeLayout
+                android:id="@+id/imageshow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gradient_layer"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/title_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginLeft="8dp"
+                    android:text=""
+                    android:textColor="#d9e2ee"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</FrameLayout>

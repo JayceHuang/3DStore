@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_bg_height"
+        android:background="@drawable/bg_detail_overlying"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_title_height"
+            android:layout_marginTop="18dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/btn_actionbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/actionbar_back_seletor" />
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toLeftOf="@+id/rly_source"
+                android:layout_toRightOf="@+id/btn_actionbar_back"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/video_detail"
+                android:textColor="#fff"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:id="@+id/rly_source"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/score_bg" >
+
+                <TextView
+                    android:id="@+id/btn_movie_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.0"
+                    android:textColor="#ffb72c"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- -背景阴影图 -->
+
+            <FrameLayout
+                android:id="@+id/layout_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <com.runmit.sweedee.view.BlurImageView
+                    android:id="@+id/movie_icon"
+                    android:layout_width="108dp"
+                    android:layout_height="155dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_movie_image"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="-1dp"
+                    android:background="@drawable/bg_detail_poster_matte" >
+
+                    <TextView
+                        android:id="@+id/tv_detail_movie_real_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:paddingLeft="3dp"
+                        android:singleLine="true"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="111dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="right" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_virtual_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_gravity="bottom|right"
+                        android:background="@drawable/bg_detial_movie_price"
+                        android:gravity="center"
+                        android:minWidth="41dp"
+                        android:orientation="horizontal"
+                        android:visibility="invisible" >
+
+                        <TextView
+                            android:id="@+id/tv_detail_movie_virtual_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="2dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_detail_water"
+                            android:layout_width="9dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="4dp"
+                            android:background="@drawable/ic_detail_movie_water" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/bt_movie_play"
+                android:layout_width="135dp"
+                android:layout_height="37dp"
+                android:layout_alignBottom="@id/layout_img"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="24dip"
+                android:layout_toRightOf="@id/layout_img"
+                android:background="@drawable/detail_play_btn_selector"
+                android:text="@string/detail_activity_play"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/bt_movie_download"
+                android:layout_width="55dp"
+                android:layout_height="37dp"
+                android:layout_alignTop="@+id/bt_movie_play"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@+id/bt_movie_play"
+                android:background="@drawable/trailer_ic_down_hover_seletor" />
+
+            <TextView
+                android:id="@+id/tv_movie_genres"
+                style="@style/detail_movie_text_style"
+                android:layout_alignLeft="@+id/layout_img"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="130dp"
+                android:text=""
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:id="@+id/something_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/layout_img"
+                android:layout_below="@+id/tv_movie_genres"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp" >
+
+                <TextView
+                    android:id="@+id/tv_movie_totalTime"
+                    style="@style/detail_movie_text_style"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textSize="16dp"  />
+
+                <TextView
+                    android:id="@+id/tv_movie_country"
+                    style="@style/detail_movie_text_style"
+                    android:text=""
+                    android:textSize="16dp" />
+                
+                <TextView
+                    android:id="@+id/tv_movie_english_origin"
+                    style="@style/detail_movie_text_style"
+                    android:text="@string/english_origin_sound"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_movie_director"
+                style="@style/detail_movie_text_style"
+                android:layout_alignLeft="@+id/layout_img"
+                android:layout_below="@+id/something_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/movie_director"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_movie_actors"
+                style="@style/detail_movie_text_style"
+                android:layout_alignLeft="@+id/layout_img"
+                android:layout_below="@+id/tv_movie_director"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/movie_actors"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bg_layout"
+        android:orientation="vertical" >
+
+        <com.runmit.sweedee.view.PagerSlidingTabStrip
+            android:id="@+id/detail_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@color/white" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/detail_viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_back_ground" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        
+    <!-- 无搜索结果 -->
+    <RelativeLayout
+        android:id="@+id/search_empty_complext_result_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f2f2f2"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/search_empty_result_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="135dp"
+            android:contentDescription="@string/about_blank"
+            android:src="@drawable/img_channel_renovate_lose" />
+
+        <TextView
+            android:id="@+id/search_empty_result_tip_tv"
+            style="@style/textview_shadow_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_empty_result_icon_iv"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/search_resource_query_found_nothing_info"
+            android:textColor="#999"
+            android:textSize="14dp" />
+    </RelativeLayout>
+    
+	<org.lucasr.twowayview.widget.TwoWayView
+	    android:id="@+id/searchRecycleView"
+	    style="@style/TwoWayView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:cacheColorHint="#00000000"
+	    android:divider="@null"
+	    android:fadingEdge="none"
+	    android:focusable="false"
+	    android:listSelector="@android:color/transparent"
+	    android:overScrollMode="never"
+	    android:scrollbars="none"
+	    android:scrollingCache="false" />
+</LinearLayout>

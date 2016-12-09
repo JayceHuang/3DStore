@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/taskmanager_space_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/local_space_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="27dip"
+            android:progressDrawable="@drawable/progress_down_space" />
+
+        <TextView
+            android:id="@+id/local_fragment_empty_space_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/local_space_size"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/explist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/taskmanager_space_layout"
+        android:layout_alignParentTop="true"
+        android:childDivider="@android:color/transparent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:divider="@android:color/transparent" />
+
+    <include
+        android:id="@+id/taskmanager_operate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        layout="@layout/download_multi_popup"
+        android:visibility="invisible" />
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/taskmanager_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/taskmanager_space_layout"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="68dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <ImageView
+        android:id="@+id/imageView_paystyle_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_pay_treasure"
+        android:contentDescription="@string/app_name"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/checkBox_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/radio_normal"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/textView_payName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView_paystyle_bg"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="#040910"
+        android:layout_marginLeft="10dip" />
+
+</RelativeLayout>

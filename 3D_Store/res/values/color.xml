@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="thin_blue">#00a1ff</color>
+    <color name="menu_edit_bg_color">#1c2430</color>
+    <color name="detail_play_btn_pressed">#1b82d1</color>
+    <color name="detail_play_btn_normal">#1e91eb</color>
+
+    <color name="textview_deep_black">#040910</color>
+    <color name="textview_gray">#666666</color>
+    
+    <color name="textview_moviecatalog_normal">#757575</color>
+    <color name="textview_moviecatalog_press">#1e91e9</color>
+    <color name="taskmanager_state_pause">#a0a0a0</color>
+    <color name="taskmanager_state_other">#71bc1e</color>
+</resources>

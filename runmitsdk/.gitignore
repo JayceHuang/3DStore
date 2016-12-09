@@ -1,0 +1,12 @@
+bin/
+gen/
+obj/
+build/
+.gradle/
+.idea/
+.settings/
+proguard/
+*.apk
+local.properties
+/3D_Store/.classpath
+/3D_Store/project.properties

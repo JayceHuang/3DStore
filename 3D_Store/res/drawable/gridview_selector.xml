@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+    <corners android:radius="0dip" />
+
+    <!--     <item android:state_pressed="true"  -->
+    <!--             android:drawable="@drawable/pressed_application_background_static" /> -->
+    <!--         <item android:state_window_focused="false"   -->
+    <!--              android:drawable="@drawable/focused_application_background_static" /> -->
+    <!--         <item android:state_window_focused="true"  -->
+    <!--               android:drawable="@drawable/focused_application_background_static" /> -->
+    <!--         三个<item>分别指定了在点击图标,聚焦,失焦的情况下使用的元素背景 -->
+</shape>

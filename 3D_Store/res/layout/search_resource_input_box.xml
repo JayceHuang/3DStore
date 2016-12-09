@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="15dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:focusable="true"
+        android:paddingLeft="13dp"
+        android:paddingRight="5dp" >
+
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_seach_top" />
+
+        <ImageView
+            android:id="@+id/search_resource_input_box_clear_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/ic_search_list_delete_white"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/search_resource_input_box_keyword_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dip"
+            android:layout_toLeftOf="@+id/search_resource_input_box_clear_iv"
+            android:layout_toRightOf="@+id/ic_search"
+            android:background="@null"
+            android:hint="@string/search_resource_input_box_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textColorHint="#748796"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/search_text_layout"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/search_resource_input_box_search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/local_edit_bg_selector"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textColor="@drawable/search_cancel_search_textcolor_selector"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/search_resource_input_box_back_btn"
+            android:layout_width="75dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/local_edit_bg_selector"
+            android:gravity="center"
+            android:shadowColor="@color/white"
+            android:text="@string/cancel"
+            android:textColor="@drawable/search_cancel_search_textcolor_selector"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/input_box_bg_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/search_text_layout"
+        android:focusable="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_seach_input_box_normal" />
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+        <!-- <item name="android:actionBarTabStyle">@style/MyActionBarTabs</item> -->
+        <item name="android:actionBarTabBarStyle">@style/MyActionBarTabBars</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:actionMenuTextColor">@color/actionbar_text_color_selector</item>
+        <item name="android:actionMenuTextAppearance">@style/MyMenuTextStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/actionbar_back_seletor</item>
+        <item name="android:selectableItemBackground">@drawable/actionbar_button_color_selector
+        </item>
+        <item name="android:alertDialogTheme">@style/AlertDialog</item>
+        <item name="android:textViewStyle">@style/CodeFont</item>
+    </style>
+    
+    <style name="OverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/menu_more_icon_seletor</item>
+    </style>
+    
+    <style name="PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/bg_overflow_item</item>
+    </style>
+    
+    <style name="CustomNoneActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>        
+        <item name="android:alertDialogTheme">@style/AlertDialog</item>
+        <item name="android:textViewStyle">@style/CodeFont</item>
+    </style>
+
+    <style name="CodeFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="HomeStyle" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:textViewStyle">@style/CodeFont</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/action_bar_bg</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:backgroundStacked">@android:color/white</item>
+        <item name="android:displayOptions">useLogo|showTitle</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/actionbar_text_color_selector</item>
+    </style>
+
+    <style name="MyMenuTextStyle" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/actionMenuTextColor</item>
+    </style>
+
+    <!-- ActionBar tabs text -->
+    <style name="MyActionBarTabText" parent="@android:style/Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@color/actionbar_text_color_selector</item>
+    </style>
+
+    <style name="MyActionBarTabs" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/abs__list_focused_holo</item>
+    </style>
+
+    <style name="MyActionBarTabBars" parent="@android:style/Widget.Holo.ActionBar.TabBar">
+        <item name="android:showDividers">none</item>
+    </style>
+
+    <style name="AlertDialogWhiteStyle_Lib">
+        <item name="android:bottomBright">@drawable/bottom_white_popups_bg</item>
+        <item name="android:bottomDark">@drawable/bottom_white_popups_bg</item>
+        <item name="android:bottomMedium">@drawable/bottom_white_popups_bg</item>
+        <item name="android:centerBright">@drawable/middle_white_popups_bg</item>
+        <item name="android:centerDark">@drawable/middle_white_popups_bg</item>
+        <item name="android:centerMedium">@drawable/middle_white_popups_bg</item>
+        <item name="android:topBright">@drawable/top_white_popups_bg</item>
+        <item name="android:topDark">@drawable/top_white_popups_bg</item>
+    </style>
+
+    <style name="AlertDialogBlackStyle">
+        <item name="android:bottomBright">@drawable/bottom_black_popups_bg</item>
+        <item name="android:bottomDark">@drawable/bottom_black_popups_bg</item>
+        <item name="android:bottomMedium">@drawable/bottom_black_popups_bg</item>
+        <item name="android:centerBright">@drawable/middle_black_popups_bg</item>
+        <item name="android:centerDark">@drawable/middle_black_popups_bg</item>
+        <item name="android:centerMedium">@drawable/middle_black_popups_bg</item>
+        <item name="android:topBright">@drawable/top_black_popups_bg</item>
+        <item name="android:topDark">@drawable/top_black_popups_bg</item>
+    </style>
+
+    <style name="CustomProgressDialogStyle_Lib">
+        <item name="android:bottomBright">@drawable/tips_bg</item>
+        <item name="android:bottomDark">@drawable/tips_bg</item>
+        <item name="android:bottomMedium">@drawable/tips_bg</item>
+        <item name="android:centerBright">@drawable/tips_bg</item>
+        <item name="android:centerDark">@drawable/tips_bg</item>
+        <item name="android:centerMedium">@drawable/tips_bg</item>
+        <item name="android:fullBright">@drawable/tips_bg</item>
+        <item name="android:fullDark">@drawable/tips_bg</item>
+        <item name="android:topBright">@drawable/tips_bg</item>
+        <item name="android:topDark">@drawable/tips_bg</item>
+    </style>
+
+    <style name="MyApp.BorderlessButton_Lib" parent="@android:style/Widget.Holo.Button.Borderless">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- dialog默认的白色对话框样式 -->
+    <style name="AlertDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:alertDialogStyle">@style/AlertDialogWhiteStyle_Lib</item>//背景图相关的style
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:progressBarStyle">@style/ProgressBar_head_Lib</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:borderlessButtonStyle">@style/MyApp.BorderlessButton_Lib</item>
+    </style>
+    <!-- dialog默认的黑色对话框样式 -->
+    <style name="AlertDialogDark" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:alertDialogStyle">@style/AlertDialogBlackStyle</item>//背景图相关的style
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:progressBarStyle">@style/ProgressBar_head_Lib</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!-- dialog的黑色加载框样式 -->
+    <style name="ProgressDialogDark" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:progressBarStyle">@style/ProgressBar_head_Lib</item>
+        <item name="android:paddingRight">3dip</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:alertDialogStyle">@style/CustomProgressDialogStyle_Lib</item>
+    </style>
+
+    <style name="SearchPageStyle" parent="CustomActionBarTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>

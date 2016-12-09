@@ -1,0 +1,2 @@
+include 'runmitsdk'
+project(':runmitsdk').projectDir = new File(settingsDir, '../../RunmitSDK')

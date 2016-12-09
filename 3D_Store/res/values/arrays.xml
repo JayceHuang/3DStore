@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <!-- Used in View/Spinner1.java -->
+    <string-array name="home_tabs">
+        <item>Featured</item>
+        <item>Movies</item>
+        <item>Games</item>
+        <item>Apps</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="search_tabs">
+        <item>ALL</item>
+        <item>Videos</item>
+        <item>Games</item>
+        <item>Apps</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="video_resolution">
+        <item>HD</item>
+        <item>UHD</item>
+    </string-array>
+    
+    <string-array name="regist_head_type">
+        <item>Phone</item>
+        <item>Email</item>
+    </string-array>
+    
+    <string-array name="my_wallet_head_type">
+        <item>Purchased</item>
+        <item>Recharge</item>
+        <item>Present</item>
+    </string-array>
+    
+    <string-array name="my_video_head_type">
+        <item>Watched records</item>
+        <item>Cached records</item>
+    </string-array>
+    <string-array name="login_head_type">
+        <item>Phone Log In</item>
+        <item>Email Log In</item>
+    </string-array>
+    <string-array name="reget_pwd_type">
+        <item>Phone Reset</item>
+        <item>Email Reset</item>
+    </string-array>
+    
+    <string-array name="task_tabs">
+        <item>Download task</item>
+        <item>Update</item>
+    </string-array>
+</resources>

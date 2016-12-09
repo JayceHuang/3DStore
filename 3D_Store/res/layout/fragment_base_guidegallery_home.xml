@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black_background" >
+
+    <FrameLayout
+        android:id="@+id/content_framelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <org.lucasr.twowayview.widget.TwoWayView
+            android:id="@+id/list"
+            style="@style/TwoWayView"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
+        	android:layout_marginRight="13dp"
+        	android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false"
+            android:overScrollMode="never" />
+        
+        <com.runmit.sweedee.action.home.GuideGallery
+            android:id="@+id/guide_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

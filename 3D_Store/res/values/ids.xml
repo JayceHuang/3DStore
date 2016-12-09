@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="search_tab_vp" />
+    
+    <item name="twowayview_item_click_support" type="id"/>
+    <item name="twowayview_item_selection_support" type="id"/>
+</resources>

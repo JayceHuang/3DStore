@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="partner_id">0x11300001</string>
+    <string name="app_name">3D Store</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="login">登录</string>
+    <string name="login_and_regist">登录/注册</string>
+    <string name="login_password">输入密码</string>
+    <string name="player_exit_in_3g">当前为非WLAN网络环境，后台播放已退出！</string>
+    <string name="player_exit_in_wifi_to_3g">当前已切换为非WLAN网络环境，为了保护您的流量，播放已退出！</string>
+    <string name="player_in_3g">当前为非WLAN网络环境，为了保护您的流量，建议您在WLAN环境下播放！</string>
+    <string name="player_switching_video">正在切换影片清晰度</string>
+    <string name="player_switching_video_resouce">正在切换播放片源</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="has_no_using_network">无可用网络</string>
+    <string name="no_found_sdcard">sd卡没有加载</string>
+
+    <!-- 设置部分相关 -->
+    <string name="no_wifi_stop_download">已开启2G/3G/4G流量保护，是否去更改设置？</string>
+    <string name="more">更多</string>
+    <string name="please_enter_account">请输入您的帐号和密码</string>
+    <string name="loading">正在努力加载&#8230;</string>
+    <string name="regist_account">注册</string>
+    <string name="flow_next_show">下次不再提示</string>
+
+    <!-- 菜单项显示 -->
+    <string name="delete_tasks_confirmation">删除提示</string>
+    <string name="aboutus">关于</string>
+    <string name="commit">提交</string>
+    <string name="about_blank">file:///android_asset/about_blank.html</string>
+    <string name="click_login"><u>点击登录</u></string>
+    <string name="play_record">观看记录</string>
+    <string name="pay_history">购买记录</string>
+	
+    <!-- 新通用对话框 -->
+    <string name="operate_delete">删除</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string>
+    <string name="ptr_last_updated">最近更新时间: {0}</string>
+   
+    <string name="edit">编辑</string>
+    <string name="confirm_title">提示</string>
+    <string name="redo">重试</string>
+    <string name="fetching_video_name">正在获取影片名称</string>
+    <string name="re_play">重播</string>
+    <string name="continue_play_tip">已播放</string>
+    <string name="watch_to">已看</string>
+    <string name="pay_movie">购买影片</string>
+    <string name="pay_method">支付方式</string>
+    <string name="pay_commit">立即支付</string>
+    <string name="agree_and_regist">同意并注册</string>
+    <string name="regist_email">邮箱：</string>
+    <string name="login_account">帐号：</string>
+    <string name="regist_nicky">昵称：</string>
+    <string name="phone_regist_nicky">昵&#160;&#160;&#160;&#160;称：</string>
+    <string name="regist_password">密码：</string>
+    <string name="phone_regist_password">密&#160;&#160;&#160;&#160;码：</string>
+    <string name="regist_edit_email_hint">常用邮箱地址</string>
+    <string name="regist_edit_nicky_hint">(2&#8211;8个汉字或4&#8211;16个字符)</string>
+    <string name="regist_edit_password_hint">(6&#8211;12个字母或数字)</string>
+    <string name="regist_select_location">地区：</string>
+    <string name="phone_regist_select_location">国家或地区：</string>
+    <string name="regist_perrmision">3D Store使用协议及版权申明</string>
+    <string name="regist_send_verify_code">发送验证码</string>
+    <string name="reget_send_verify_code">重新发送（{0}）</string>
+    <string name="regist_input_phone">请输入您的手机号</string>
+    <string name="regist_verify_code">验证码：</string>
+    <string name="regist_edit_verify_code_hint">填写手机收到的验证码</string>
+    <string name="battery">电量</string>
+    <string name="suggest">意见反馈</string>
+    <string name="play_setting">播放设置</string>
+    <string name="download_setting">缓存/下载设置</string>
+    <string name="network_setting">网络设置</string>
+    <string name="game_settting">游戏设置</string>
+    <string name="caption_setting">字幕设置</string>
+    <string name="audio_track_setting">音轨设置</string>
+    <string name="play_setting_first_select_high">优先播放高清</string>
+    <string name="play_setting_first_select_super_high">优先播放超清</string>
+    <string name="install_after_download">应用下载完立即开始安装</string>
+    <string name="delete_after_install">安装完成自动删除安装包</string>
+    <string name="audio_setting_first_orin">优先播放原声音轨</string>
+    <string name="audio_setting_first_local">优先播放系统语言音轨</string>
+    
+    <string name="download_setting_first_select_high">优先缓存高清</string>
+    <string name="download_setting_first_select_super_high">优先缓存超清</string>
+    <string name="download_setting_first_ch">中文字幕</string>
+    <string name="download_setting_first_en">英文字幕</string>
+    <string name="loginout">注销</string>
+    <string name="setting">设置</string>
+    <string name="all_game">全部</string>
+    <string name="video_intro">简介</string>
+    <string name="video_comment">评论</string>
+    <string name="no_wifi_play">允许2G/3G/4G下在线播放</string>
+    <string name="game_setting_tip">开启3D视效</string>
+    
+    <string name="no_wifi_download">允许2G/3G/4G下缓存视频</string>
+    <string name="user_center">个人中心</string>
+    <string name="check_update">检查更新</string>
+    <string name="qq_group_by_app">官方QQ交流群:</string>
+    <string name="email_group_by_app">邮箱:</string>
+    <string name="conpany_info">深圳润华创视科技有限公司 版权所有</string>
+    <string name="copyright">Copyright ©2015 3D Store ALL Rights Reserved</string>
+    <string name="current_version">当前版本：%1$s</string>
+    <string name="no_play_record_tip">您还没有任何观看记录</string>
+    <string name="no_network_movie">服务器拉取数据失败！</string>
+    <string name="no_purchase_record_tip">您还没有任何购买记录</string>
+    <string name="detail_movie_prevue">预告片</string>
+    <string name="select_location">选择地区</string>
+    <string name="download_cancle">有正在缓存的任务，确认退出？</string>
+    <string name="real_quit">退出</string>
+    <!-- 搜索页 -->
+    <string name="search">搜索</string>
+    <string name="none_current">暂无</string>
+    <string name="searching">搜索中&#8230;</string>
+    <string name="fetch_data_error">拉取数据失败</string>
+    <string name="search_history_tit">搜索历史</string>
+    <string name="clear_search_history_tit">清除记录</string>
+    <string name="title_activity_search_resource">搜索资源</string>
+    <string name="search_resource_input_box_hint">输入搜索关键字</string>
+    <string name="search_resource_query_failed">哦，好像出错了！先放松下再重试</string>
+    <string name="search_resource_info_no_network">无可用网络，请检查网络连接</string>
+    <string name="search_resource_query_found_nothing_info">暂无搜索结果~</string>
+    <string name="search_resource_info_input_is_null">输入不能为空，请重新输入</string>
+    <string name="search_resource_activity_hotword_header_title">热门搜索</string>
+    <string name="search_resource_info_input_excceed_max_num">输入的关键字超过最大数</string>
+
+    <!-- 缓存页 -->
+    <string name="download_app_init">下载</string>
+    <string name="download_app_running">下载中</string>
+    <string name="download_app_paused">暂停</string>
+    <string name="download_app_failed">失败</string>
+    <string name="download_app_open">打开</string>
+    <string name="download_app_resume">继续</string>
+    <string name="download_app_retry">重试</string>
+    
+    <string name="download_app_install">安装</string>
+    
+    <string name="game_download">下载</string>
+    <string name="deleting_task">正在删除任务&#8230;</string>
+    <string name="deleting_task_failed">删除失败</string>
+    <string name="file_no_exist">该文件已经不存在！</string>
+    <string name="confirm_delete_msg">确认删除吗？</string>
+    <string name="sdcard_full_failed">操作失败,磁盘已满</string>
+    <string name="sdcard_full_failed_2">存储空间不足, 继续缓存失败！</string>
+    <string name="no_download_record_msg">您还没有任何缓存记录</string>
+    <string name="fetching_download_list_msg">正在获取本地列表</string>
+    <string name="local_space_size">存储空间：剩余空间 %1$s/总空间%2$s</string>
+    <string name="download_tast_success">创建缓存任务成功</string>
+    <string name="download_tast_file_already_exist">任务已存在 </string>
+    <string name="download_tast_already_exist">该视频已存在！</string>
+    <string name="download_tast_acces_permission_denied">创建任务{0}失败,SD卡错误,无法缓存！</string>
+    <string name="download_tast_maxsize_failed">创建任务失败,不支持文件大于4G</string>
+    <string name="download_tast_error_info">抱歉，该视频暂不支持缓存，请尝试其他视频</string>
+    <string name="download_tast_default_err">创建任务{0}失败！,错误码：{1}</string>
+    <string name="download_waitting">等待缓存</string>
+    <string name="download_paused">已暂停</string>
+    <string name="download_failed">缓存失败</string>
+    <string name="create_file_failed">创建文件失败</string>
+    <string name="write_file_failed">写文件失败</string>
+    <string name="read_file_failed">读文件失败</string>
+    <string name="sdcard_no_space">存储空间不足</string>
+
+    <!-- 首页 -->
+    <string name="douban_user">豆瓣用户</string>
+
+    <!-- 详情页 -->
+    <string name="data_null_and_wait_for_server">数据空,等待服务器添加对应字段</string>
+    <string name="video_detail">影片详情</string>
+    <string name="movie_director">导演：</string>
+    <string name="movie_actors">主演：</string>
+    <string name="movie_genres">类型：</string>
+    <string name="movie_year">年份：</string>
+    <string name="detail_activity_play"> 立即播放 </string>
+
+    <!-- 用户上报 -->
+    <string name="suggest_hint">请输入您的反馈&#8230;</string>
+    <string name="contact_hint">请输入QQ号或邮箱（选填，便于我们给您反馈）</string>
+    <string name="submit_success">您的反馈已成功提交，谢谢您对3D Store的关注！</string>
+    <string name="submit_failed">提交失败了，请再试试</string>
+    <string name="submit_empty_tip">请先输入您的建议！</string>
+    <string name="submit_max_check_tip">对不起，您的输入已经超过我们的最大限制</string>
+    <string name="feedback_submitting">正在提交&#8230;</string>
+    <string name="permission_opening">正在打开协议&#8230;</string>
+    <string name="no_albumid">资源id错误</string>
+    <string name="login_state_unavailable">下线通知，您的帐号已在另一台设备登录</string>
+
+    <!-- 设置项 -->
+    <string name="logout_processing">正在注销&#8230;</string>
+
+    <!-- 通用 词汇&提示 -->
+    <string name="wait">等待</string>
+    <string name="change_resource">切换片源</string>
+    <string name="other_error">其他错误</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="no_net_connection">无网络连接</string>
+    <string name="select_all">全选</string>
+
+    <!-- 登录 -->
+    <string name="login_username_limit">用户名不能超过40个字符</string>
+    <string name="login_password_limit">密码不能超过16个字符</string>
+    <string name="login_ing">正在登录&#8230;</string>
+    <string name="no_network_toast">无网络连接，请检查您的网络后重试！</string>
+    <string name="login_success">登录成功</string>
+
+    <string name="loginerr_timeout_with_retrytip">登录超时，请检查您的网络后重试，错误码：</string>
+    <string name="loginerr_unknown_error">登录失败，网络错误，请检查网络后重试，错误码：</string>
+    <string name="loginerr_ssl_error">登录失败，证书验证错误，请检查您的系统时间是否准确或者检查网络是否安全后再试试。</string>
+    <string name="logout_succeed">注销成功</string>
+
+    <!-- 注册 -->
+    <string name="regist_success_and_send_email_fail">注册成功，但是我们发送激活邮件失败，为了您的账号安全，建议更换账号</string>
+    <string name="regist_success">注册成功</string>
+    <string name="regist_fail_verifycode_timeout">注册失败，验证码过期，错误码：</string>
+    <string name="regist_fail_device_limit">注册失败，您的设备注册账号数已超过限制，错误码：</string>
+    <string name="regist_fail_email_already_regist">注册失败，您的邮箱已经注册，请更换邮箱，错误码：</string>
+    <string name="regist_fail_verifycode_error">注册失败，短信验证码错误，错误码：</string>
+    <string name="regist_fail_bind_device_error">注册失败，绑定设备错误，错误码：</string>
+    <string name="regist_fail_default">注册失败，请重试，错误码：</string>
+    <string name="regist_invalidate_email">请输入正确的邮箱</string>
+    <string name="regist_invalidate_verifycode">请输入正确的验证码</string>
+    <string name="regist_invalidate_password">请输入正确的手机号码</string>
+    <string name="regist_psw_contain_chinese">密码不能含有中文</string>
+    <string name="regist_psw_contain_special_word">密码中含有特殊字符，请输入数字或者字母之后重试</string>
+    <string name="regist_nicky_invalidate">请输入2&#8211;8个汉字或4&#8211;16个字符的昵称</string>
+    <string name="regist_password_invalidate">请输入6&#8211;12位字母或数字的密码</string>
+    <string name="regist_ing">正在注册&#8230;</string>
+    <string name="regist_fail_phonenumber_already_regist">注册失败，您的手机号已经注册过，请您直接登录或者更换手机号码</string>
+    <string name="regist_fail_get_verifycode_error">获取验证码出错，请重新获取</string>
+    <string name="regist_fail_get_verifycode_error_ssl_error">获取验证码失败，证书验证错误，请检查您的系统时间是否准确或者检查网络是否安全后再试试。</string>
+    
+    
+	<!-- 找回密码 -->
+	<string name="reget_password">找回密码</string>
+    <string name="account_not_found">帐号不存在</string>
+    <string name="sending_verify_code">正在发送验证码</string>
+    <string name="pwd_modify_error">修改密码失败</string>
+    <string name="pwd_not_match_error">密码不一致</string>
+    <string name="send_phone_msg">已向您的手机:{0}发送验证码</string>
+    <string name="input_identifying_code">请输入收到的验证码</string>
+    <string name="next_step">下一步</string>
+    <string name="pwd_reset_success">修改密码成功</string>
+    <string name="reget_pwd_tip_close">请关闭本页面，并用新密码登录3D Store</string>
+    <string name="get_identifying_code">获取验证码</string>
+    <string name="pwd_new_hint1">新密码，6-12位数字或字母</string>
+    <string name="pwd_new_hint2">再次输入新密码</string>
+    <string name="close">关闭</string>
+    <string name="pwd_new_tips">请输入密码</string>
+    <string name="pwd_confirm_tips">请再次输入密码</string>
+	
+
+    <!-- 支付 -->
+    <string name="pay_get_may_method_fail">获取支付方式失败，请重试</string>
+    
+    <string name="pay_get_order_fail">获取订单失败，请重试，错误码：</string>
+    <string name="pay_price_null">传入的商品价格为空</string>
+    <string name="pay_get_pay_method_ing">正在获取支付方式&#8230;</string>
+    <string name="pay_create_order_ing">正在生成订单&#8230;</string>
+    <string name="pay_success_dialog_message">支付成功！开启您的高清3D影视视界吧！</string>
+    <string name="pay_fail_dialog_message">抱歉，支付失败，请稍后重试</string>
+    <string name="pay_result_dialog_title">购买提示</string>
+
+    
+    <string name="pay_fail_dialog_message_and_rtncode">抱歉，支付失败，请稍后重试！原因：</string>
+    <string name="pay_opreate_succeed">操作成功</string>
+    <string name="pay_system_error">系统异常</string>
+    <string name="pay_user_not_allowed">该用户绑定的支付宝账户被冻结或不允许支付</string>
+    <string name="pay_user_unbinded">该用户已解除绑定</string>
+    <string name="pay_data_format_error">数据格式不正确</string>
+    <string name="pay_notbind_or_binderror">绑定失败或没有绑定</string>
+    <string name="pay_order_pay_failed">订单支付失败</string>
+    <string name="pay_rebind_account">重新绑定账户</string>
+    <string name="pay_servece_upadating">支付服务正在进行升级操作</string>
+    <string name="pay_user_cancel">用户中途取消支付操作</string>
+    <string name="pay_web_pay_failed">网页支付失败</string>
+    <string name="zhifubao">(支付宝)</string>
+
+
+    <!-- 点播 &下载部分 -->
+    <string name="normal_resolution">标清</string>
+    <string name="play_neterror_and_trylater">网络异常，请稍后重试</string>
+    <string name="play_nettimeout_and_trylater">网络超时，请稍后重试</string>
+    <string name="play_get_playurl_failed">非常抱歉，获取资源地址失败了</string>
+    <string name="play_loading_url">正在获取播放地址&#8230;</string>
+    <string name="download_app_url">正在获取下载地址&#8230;</string>
+    <string name="paly_net_is_bad_and_change_source">您当前的网络环境较差，退出还是切换片源？</string>
+    <string name="paly_net_is_bad_and_wait_tip">您当前的网络环境较差，退出还是等待？</string>
+    <string name="play_last_play_to">您上次观看至</string>
+    <string name="play_loading_movie">正在为您获取影片</string>
+    <string name="play_complete">播放完成</string>
+    <string name="playerr_service_died">播放服务终止</string>
+    <string name="playerr_source_error">视频源错误，无法进行播放</string>
+    <string name="download_loading_url">正在获取缓存地址&#8230;</string>
+    <string name="application_crash_toast">很抱歉，程序出现异常，即将退出，请联系我们反馈问题</string>
+    <string name="load_caption_fail">加载字幕失败，请重试</string>
+    <string name="press_again_to_exit_app">再按一次后退键，退出应用程序</string>
+    <string name="to3d">切换到横版</string>
+    <string name="stereo_movie">3D视频</string>
+    <string name="stereo_game">3D游戏</string>
+    <string name="stereo_app">3D应用</string>
+    <string name="gameconfig_updated_tip">{0}款游戏配置更新完成！</string>
+    <string name="gameconfig_updated_tip_error">游戏配置更新失败！</string>
+    <string name="find_gameconfig_tip">检测到您手机上有{0}款游戏可以转换为3D视效，是否转化？</string>
+    <string name="gameconfig_update">转换</string>
+    <string name="my_threedgame">3D游戏</string>
+    <string name="my_threedapp">3D应用</string>
+    <string name="choiceness">精选</string>
+    <string name="no_App_record_tip">您还未安装任何应用</string>
+    <string name="no_Game_record_tip">您还未安装任何游戏</string>
+    <string name="movie_minText"> 分钟 </string>
+    <string name="cash_pay">现金支付</string>
+    <string name="wallet_pay">钱包支付</string>
+    <string name="pay_toast">购买说明：</string>
+    <string name="pay_agreement">购买影片后，您还可以将影片缓存到手机上，不过要在72小时内把缓存到本地的影片看完哦，过期则需重新缓存！</string>
+    <string name="wallet_pay_dialog_message">账户余额：{0}元</string>
+    <string name="wallet_pay_money_pool">您的账户余额已不足</string>
+    <string name="recharge">充值</string>
+    <string name="get_wallet_fail_and_not_allow_pay">获取账户余额失败，暂时不能用此方式支付</string>
+    <string name="rechare_amount">充值金额</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="account_balance">{0}水滴</string>
+    <string name="my_wallet_msg">余额/购买/赠送记录</string>
+    <string name="task_over_due_toast_msg">抱歉，应版权方要求，缓存完成视频3天后将不可播放，需要重新缓存，是否重新缓存？</string>
+    <string name="re_download">重新缓存</string>
+    <string name="usercenter_account_balance">{0}</string>
+    <string name="need_login_to_get_play_record">需要登录获取您购买影片的信息</string>
+    <string name="user_no_login">用户还未登录，无法充值</string>
+
+    <!-- 搜索部分 -->
+    <string name="installNums">人安装</string>
+    <!-- 应用详情 -->
+    <string name="appdetail_download_error">失败</string>
+    <string name="appdetail_launch_app">打开</string>
+    <string name="appdetail_download_app">下载</string>
+    <string name="appdetail_install_app">安装</string>
+    <!-- 应用详情 xml -->
+    <string name="appdetail_title">应用详情</string>
+    <string name="appdetail_install_text">安装 ：</string>
+    <string name="appdetail_size_text">大小 ：</string>
+    <string name="appdetail_filetype_text">类型 ：</string>
+    <string name="appdetail_desc_text">应用描述：</string>
+    <string name="appdetail_news_text">最新动态：</string>
+    <string name="appdetail_version_text">版本信息：</string>
+    <string name="appdetail_developer_text">应用开发商 ：</string>
+    <string name="appdetail_update_text">更新时间 ：</string>
+    <string name="appdetail_update_v_text">更新版本 ：</string>
+    <string name="appdetail_apptype_text">应用类型 ：</string>
+    <string name="appdetail_filesize_text">文件大小 ：</string>
+    <!-- 搜索页 -->
+    <string name="search_result_type_movie">视频</string>
+    <string name="search_result_type_game">游戏</string>
+    <string name="search_result_type_app">应用</string>
+    <string name="search_rec_type_movie">视频</string>
+    <string name="search_rec_type_game">游戏</string>
+    <string name="search_rec_type_app">应用</string>
+    <string name="pay_waiting">支付等待中，请稍后再试</string>
+    <string name="my_3d_movie">我的3D视频</string>
+    <string name="first_download_gameconfig_tip">1、从3D Store下载游戏安装完成后，需要回到3D Store点击“打开”游戏才有3D视效哦 \n\n2、切换游戏的2D/3D视效，请到个人中心-设置-游戏设置</string>
+    <string name="launch_game_without_3d_tip">该游戏尚未转化成3D效果，将会以2D形式启动</string>
+    <string name="known">知道了</string>
+    
+    <string name="virtual_money_pay">水滴支付</string>
+    <string name="remain_virtual_money_pay">剩余水滴：</string>
+    <string name="pay_movie_need_virtual_money_title">观看该影片需要滴落{0}滴水</string>
+    <string name="pay_movie_need_virtual_money_msg">剩余：{0}滴水</string>
+    <string name="pay_movie_need_virtual_money_not_enough">抱歉，您剩余的水滴已不足</string>
+    <string name="regist_and_login_success_send_virtual_money_msg">已赠送您{0}滴水，钱包鼓鼓的哦！</string>
+    <string name="sorry_get_wallet_is_null">抱歉，获取钱包失败，暂时不能播放此影片！</string>
+    <string name="present_money">赠送{0}水滴</string>
+    <string name="phone">请输入手机号</string>
+    <string name="email">请输入邮箱</string>
+    <string name="no_recharge_record_tip">您还没有任何充值记录</string>
+
+	<string name="install_player_msg">抱歉，检测到您的手机还没有安装3D播放器，请下载安装？</string>
+	<string name="reminder">温馨提示</string>
+	<string name="agree">同意</string>
+	<string name="networkrecharge_msg">Hi，亲爱的用户：\n\n
+\t\t\t温馨提示您在2G/3G/4G 网络环境下使用 3D Store在线播放、缓存影片、
+下载应用、获取内容信息或图片等，运营商会收取相应的流量费用。尽量在WLAN网络下使用，土豪请随意！\n
+\t\t\t为了为您提供全方位的服务，本软件需要使用如下权限：\n
+\t\t\t1、访问互联网、WLAN网络， 为用户提供视频播放、下载、升级应用等服务；\n
+\t\t\t2、调用手机摄像头，为用户提供 3D视效；\n
+\t\t\t3、获取手机的大致位置信息，以读取手机上的基础信息；\n
+\t\t\t4、读取手机上的IMEI、 IMSI、 MAC地址信息，以自动获得手机的基本数据；\n
+\t\t\t5、读取、修改或删除您的SD卡中内容，为用户提供本地视频播放、 编辑等服务。\n
+\t\t\t因本软件产生的任何纠纷或争议，您同意友好协商解决；协商不成，您同意将纠纷或争议提交至深圳仲裁委员会，在深圳仲裁解决。
+</string>
+	<string name="regist_ssl_error_toast">注册失败，证书验证错误，请检查您的系统时间是否准确或者检查网络是否安全后再试试。</string>
+	
+	<string name="register_nickname_tip">注册后昵称无法修改</string>
+	<string name="register_invalid_email_tip">注册非真实邮箱可能会导致帐号密码无法找回等情况</string>
+	<string name="open_three_d">3D 开</string>
+	<string name="disable_three_d">3D 关</string>
+	<string name="has_pay">已购买</string>
+	
+	<string name="enable3d_fail_the_flashlight_isopen">打开3D效果失败，请允许3D Store使用手机摄像头权限后重试！</string>
+	<string name="gaimeopen_fail_the_flashlight_isopen">打开3D游戏失败，请允许3D Store使用手机摄像头权限后重试！</string>
+	
+	<string name="testmode_tip">进入测试模式，应用即将清除磁盘缓存数据，请手动重启应用</string>
+	<string name="testmode_no_tip">退出测试模式，应用即将清除磁盘缓存数据，请手动重启应用</string>
+	<string name="testmode">Test Mode</string>
+	
+	<string name="manager_pay_password">支付密码管理</string>
+	<string name="setting_pay_password">设置支付密码</string>
+	<string name="change_pay_password">修改支付密码</string>
+	<string name="forget_pay_password">忘记支付密码</string>
+	<string name="forget_login_password">忘记登录密码</string>
+	<string name="please_end_old_password">请输入旧密码以验证身份</string>
+	<string name="please_end_new_password">请<![CDATA[<font color="#1e91eb">设置支付密码(由6位数字组成)</font>]]></string>  
+	<string name="please_end_new_password_for_what">用于每次支付前进行安全认证</string>
+
+	<string name="please_ensure_new_password">再次输入以确认</string>
+	<string name="password_is_too_young_too_simple">支付密码太弱啦，不可以是6位一样的数字哦。</string>
+	<string name="ensure_cancel_setting_password">确认要放弃设置支付密码吗？</string>
+	<string name="ensure_cancel_change_password">确认要放弃修改支付密码吗？</string>
+	<string name="ensure_cancel_reget_pay_password">确定要放弃找回支付密码吗？</string>
+	<string name="two_password_is_not_the_same">两次输入的密码不一致，请重新设置支付密码。</string>
+	<string name="pay_password_set_success">支付密码设置成功</string>
+	<string name="pay_password_error">支付密码错误，请重试。</string>
+	<string name="pay_password_error_retry">支付密码错误，还可以再试%1$s次。</string>  
+	<string name="pay_password_error_lock">支付密码错误频繁，已被锁定，请十分钟后再尝试。</string>  
+	<string name="enter_login_password_check_account">请输入登录密码以验证身份</string>
+	<string name="login_password_is_incorrect">登录密码不正确，请重试。</string>
+	<string name="english_origin_sound">英文原声</string>
+	<string name="please_enter_pay_password">请输入支付密码</string>
+	<string name="pay_to_bug_product_name">即将购买影片《{0}》</string>
+	<string name="welcome_to_user_sweedee_wallet">欢迎使用3D Store钱包</string>
+	<!-- 热词 -->
+	<string name="moviecatalog_no_data_info">暂无符合条件的数据~</string>
+	<string name="free_buy">免费</string>
+	<string name="click_to_retry">获取失败，点击重试</string>
+    <string name="loading_more">加载更多</string>
+    <string name="no_give_record_tip">您还没有任何赠送记录</string>
+    <string name="pay_waiting_dialog_message_and_rtncode">支付结果确认中，请等待</string>
+    <string name="phone_regist_sexy">性&#160;&#160;&#160;&#160;别：</string>
+    <string name="sexy_male">真汉子</string>
+    <string name="sexy_female">萌妹子</string>
+    <string name="sexy_unknow">其他</string>
+    <string name="audio_setting_first_local_message">默认播放与手机系统语言一致的配音，可选择影片原声配音</string>
+    <string name="game_setting_message">从3D Store打开游戏默认有3D视觉效果，关闭设置项则为2D视觉效果</string>
+    <string name="download_app_update">升级</string>
+    <string name="download_app_wait_down">等待下载</string>
+    <string name="loginerr_password_account_error_with_tip">账号或密码错误，请检查你的账号和密码之后重新登录</string>
+    <string name="loginerr_user_toomuch_device_login">使用此账号登录的客户端数量超过限制数，请先从其他客户端上退出，或使用其他账号登录</string>
+    <string name="regist_fail_email_invalidate">注册失败，您的邮箱无效，请更换邮箱，错误码：</string>
+    <string name="verify_code_error_toast">验证码输入错误，请重新输入</string>
+    <string name="pay_get_recharge_quota">获取充值金额失败，请重试</string>
+    <string name="recharge_result_dialog_title">充值提示</string>
+    <string name="recharge_result_dialog_message">充值成功！钱包鼓鼓哒！</string>
+        
+    <string name="moviecatalog_hotword_filter">筛选</string>
+    <string name="taskandupdate">下载与更新</string>
+    <string name="taskmanager_emptytip">你还没有任何下载任务</string>
+    <string name="taskupdate_emptytip">你的游戏与应用都是最新版的</string>
+    <string name="taskupdate_emptytip_snail">你的应用都是最新版的</string>
+    <string name="confirm_delete_task">确定要删除该任务吗？</string>
+    <string name="taskmanager_deletelocalfile">同时删除本地文件</string>
+    <string name="taskmanager_tip_install">下载完成，等待安装</string>
+    <string name="taskmanager_tip_retry"><![CDATA[<font color="#f83f3f">下载失败，请重试</font>]]></string>
+    <string name="taskmanager_tip_wait">等待下载</string>
+    <string name="taskmanager_tip_openvideo">下载成功，打开观看视频</string>
+    <string name="taskmanager_tip_openapp">已安装，打开启动</string>
+    <string name="taskmanager_version_text">版本：%1$s</string>
+    
+     <string name="videodetail_uploader">上传用户:</string>
+    
+</resources>

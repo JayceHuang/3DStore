@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_back_ground" >
+"
+
+    <LinearLayout
+        android:id="@+id/pull_refresh_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/button_catalog_filter" >
+
+                <LinearLayout
+                    android:id="@+id/moviecatalog_ll_sortcontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/button_catalog_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:background="@null"
+                android:drawablePadding="6dp"
+                android:drawableRight="@drawable/ic_filter_down"
+                android:text="@string/moviecatalog_hotword_filter"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/movie_divier_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/button_catalog_filter"
+                android:paddingRight="20dp"
+                android:src="@drawable/movie_divier_vertical" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/item_catalogfilter_divier"
+            android:layout_width="match_parent"
+            android:layout_height="2.0px"
+            android:background="#ffcccccc" >
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pull_refresh_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pull_refresh_filter"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2.0px"
+            android:background="#ffcccccc" />
+
+        <com.runmit.sweedee.view.MyListView
+            android:id="@+id/pull_refresh_List"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/movie_refreshgridview_marginleft"
+            android:layout_marginRight="@dimen/movie_refreshgridview_marginleft"
+            android:layout_marginTop="@dimen/movie_refreshgridview_margintop"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" >
+        </com.runmit.sweedee.view.MyListView>
+    </LinearLayout>
+
+</RelativeLayout>

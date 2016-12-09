@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip" >
+
+    <TextView
+        android:id="@+id/tvFileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_download_filesize"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:minHeight="30dp"
+        android:minWidth="240dp"
+        android:text="@string/update_show_msg_f"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_ignore_current_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ignore_current_version"
+        android:textColor="@android:color/black"
+        android:button="@drawable/update_toggle_button_selector"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

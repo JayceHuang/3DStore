@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_back_ground"
+    android:orientation="vertical" >
+
+   <ListView
+        android:id="@+id/listview"
+        android:layout_below="@+id/ll_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="13dip"
+        android:background="@drawable/list_bg"
+        android:divider="@color/cut_line_color"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="invisible" >
+    </ListView>
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/rl_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

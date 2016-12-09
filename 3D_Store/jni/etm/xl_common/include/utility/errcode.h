@@ -1,0 +1,754 @@
+#ifndef SD_ERRCODE_H_00138F8F2E70_200806111932
+#define SD_ERRCODE_H_00138F8F2E70_200806111932
+
+#ifdef __cplusplus
+extern "C" 
+{
+#endif
+#include "utility/sd_assert.h"
+#include "utility/define.h"
+
+#define SUCCESS							(0)
+#define SD_ERR_CODE_RESERVE  (0x0FFFFFFF)
+#define HTTP_CANCEL	10
+
+#ifdef _DEBUG
+_int32 sd_check_value(_int32 errcode,const char * func, const char * file , int line);
+
+#ifdef _ANDROID_LINUX
+#define CHECK_VALUE(errcode) 	{sd_check_value(errcode,__func__, __FILE__,  __LINE__); if(errcode != SUCCESS) { int r_errcode = errcode; if(r_errcode==SD_ERR_CODE_RESERVE) { r_errcode=-1;}	return r_errcode;}}
+#else
+#define CHECK_VALUE(errcode) 	sd_check_value(errcode,__func__, __FILE__,  __LINE__)
+#endif
+
+#else
+#define CHECK_VALUE(errcode)	{ if(errcode != SUCCESS) { int r_errcode = errcode; if(r_errcode==SD_ERR_CODE_RESERVE) { r_errcode=-1;}	return r_errcode;}}
+
+#endif
+
+_int32 set_critical_error(_int32 errcode);
+_int32 get_critical_error(void);
+
+#define CHECK_CRITICAL_ERROR  {CHECK_VALUE(get_critical_error());}
+
+
+/* preserved for os */
+
+
+/* use defined: */
+
+/***************************************************************************/
+/* common */
+/***************************************************************************/
+#define COMMON_ERRCODE_BASE				(1024)
+
+#define OUT_OF_MEMORY			(COMMON_ERRCODE_BASE + 1)
+#define INVALID_MEMORY			(COMMON_ERRCODE_BASE + 2)
+#define INVALID_SSLAB_SIZE		(COMMON_ERRCODE_BASE + 3)
+#define TOO_FEW_MPAGE			(COMMON_ERRCODE_BASE + 4)
+#define INVALID_HANDLER		(COMMON_ERRCODE_BASE + 5)
+
+#define OUT_OF_FIXED_MEMORY		(COMMON_ERRCODE_BASE + 10)
+
+#define	QUEUE_NO_ROOM			(COMMON_ERRCODE_BASE + 100)
+
+#define LOCK_SHAREBRD_FAILED	(COMMON_ERRCODE_BASE + 150)
+
+#define MAP_UNINIT				(COMMON_ERRCODE_BASE + 200)
+#define MAP_DUPLICATE_KEY		(COMMON_ERRCODE_BASE + 250)
+#define MAP_KEY_NOT_FOUND		(COMMON_ERRCODE_BASE + 300)
+#define SET_ELEMENT_NOT_FOUND	(COMMON_ERRCODE_BASE + 301)
+
+#define INVALID_ITERATOR		(COMMON_ERRCODE_BASE + 350)
+
+#define BUFFER_OVERFLOW			(COMMON_ERRCODE_BASE + 400)
+
+#define	BITMAP_BITSIZE_OVERFLOW	(COMMON_ERRCODE_BASE + 500)
+
+#define INVALID_ARGUMENT		(COMMON_ERRCODE_BASE + 600)
+
+#define NOT_FOUND_MAC_ADDR	        (COMMON_ERRCODE_BASE + 700)
+#define GETTING_IMEI_ADDR	        (COMMON_ERRCODE_BASE + 701)
+#define NETWORK_NOT_READY	        (COMMON_ERRCODE_BASE + 702)
+#define USER_ABORT_NETWORK	        (COMMON_ERRCODE_BASE + 703)
+#define NEED_RECONNECT_NETWORK	        (COMMON_ERRCODE_BASE + 704)
+#define NETWORK_INITIATING	        (COMMON_ERRCODE_BASE + 705)
+#define INVALID_SOCKET_DESCRIPTOR	(COMMON_ERRCODE_BASE + 710)
+
+#define ERROR_LOG_CONF_FILE		(COMMON_ERRCODE_BASE + 800)
+
+#define ERROR_INVALID_INADDR	(COMMON_ERRCODE_BASE + 900)
+#define ERROR_INVALID_PEER_ID	(COMMON_ERRCODE_BASE + 901)
+#define ERROR_WAIT_NOTIFY		(COMMON_ERRCODE_BASE + 902)
+#define ERROR_DATA_IS_WRITTING (COMMON_ERRCODE_BASE + 903)
+
+/***************************************************************************/
+/*asyn_frame*/
+/***************************************************************************/
+#define ASYN_FRAME_ERRCODE_BASE			(1024 * 2)
+
+#define INVALID_OPERATION_TYPE			(ASYN_FRAME_ERRCODE_BASE + 1)
+#define INVALID_MSG_HANDLER				(ASYN_FRAME_ERRCODE_BASE + 2)
+
+#define NOT_IMPLEMENT					(ASYN_FRAME_ERRCODE_BASE + 10)
+
+#define REACTOR_LOGIC_ERROR				(ASYN_FRAME_ERRCODE_BASE + 100)
+#define REACTOR_LOGIC_ERROR_1			(ASYN_FRAME_ERRCODE_BASE + 101)
+#define REACTOR_LOGIC_ERROR_2			(ASYN_FRAME_ERRCODE_BASE + 102)
+#define REACTOR_LOGIC_ERROR_3			(ASYN_FRAME_ERRCODE_BASE + 103)
+#define REACTOR_LOGIC_ERROR_4			(ASYN_FRAME_ERRCODE_BASE + 104)
+#define REACTOR_LOGIC_ERROR_5			(ASYN_FRAME_ERRCODE_BASE + 105)
+
+
+#define SOCKET_EPOLLERR					(ASYN_FRAME_ERRCODE_BASE + 200)
+#define SOCKET_CLOSED					(ASYN_FRAME_ERRCODE_BASE + 201)
+#define SOCKET_NOT_ENOUGH					(ASYN_FRAME_ERRCODE_BASE + 202)
+#define SOCKET_ERROR_FD					(ASYN_FRAME_ERRCODE_BASE + 203)
+#define SOCKET_UNKNOWN_ENCAP				(ASYN_FRAME_ERRCODE_BASE + 204)
+
+#define END_OF_FILE						(ASYN_FRAME_ERRCODE_BASE + 250)
+
+#define BAD_POLL_EVENT					(ASYN_FRAME_ERRCODE_BASE + 300)
+#define NO_ROOM_OF_POLL					(ASYN_FRAME_ERRCODE_BASE + 301)
+#define BAD_POLL_ARUMENT				(ASYN_FRAME_ERRCODE_BASE + 302)
+#define NOT_FOUND_POLL_EVENT			(ASYN_FRAME_ERRCODE_BASE + 303)
+
+#define INVALID_TIMER_INDEX				(ASYN_FRAME_ERRCODE_BASE + 500)
+
+#define	TOO_MANY_EVENT					(ASYN_FRAME_ERRCODE_BASE + 600)
+#define	INVALID_EVENT_HANDLE			(ASYN_FRAME_ERRCODE_BASE + 601)
+
+#define	DNS_NO_SERVER                   (ASYN_FRAME_ERRCODE_BASE + 701)
+#define	DNS_INVALID_ADDR                (ASYN_FRAME_ERRCODE_BASE + 702)
+#define	DNS_NETWORK_EXCEPTION           (ASYN_FRAME_ERRCODE_BASE + 703)
+#define	DNS_INVALID_REQUEST             (ASYN_FRAME_ERRCODE_BASE + 704)
+
+/***************************************************************************/
+/*os-platform*/
+/***************************************************************************/
+#define INTERFACE_ERRCODE_BASE			(1024 * 3)
+
+#define UNKNOWN_OPENING_FILE_ERR			(INTERFACE_ERRCODE_BASE + 9)
+#define BAD_DIR_PATH					(INTERFACE_ERRCODE_BASE + 10)
+#define FILE_CANNOT_TRUNCATE			(INTERFACE_ERRCODE_BASE + 100)
+#define INSUFFICIENT_DISK_SPACE			(INTERFACE_ERRCODE_BASE + 101)
+#define FILE_TOO_BIG					(INTERFACE_ERRCODE_BASE + 102)
+
+#define INVALID_CUSTOMED_INTERFACE_IDX	(INTERFACE_ERRCODE_BASE + 200)
+#define INVALID_CUSTOMED_INTERFACE_PTR  (INTERFACE_ERRCODE_BASE + 201)
+
+#define ALREADY_ET_INIT	                (INTERFACE_ERRCODE_BASE + 600)
+#define IS_NOT_INITIALIZED              (INTERFACE_ERRCODE_BASE + 601)
+
+#define INVALID_SD_CARD              (INTERFACE_ERRCODE_BASE + 602)
+/***************************************************************************/
+/*task_mgr*/
+/***************************************************************************/
+#define TASK_MGR_ERRCODE_BASE				(1024 * 4)
+#define TM_ERR_UNKNOWN  					TASK_MGR_ERRCODE_BASE  //4096
+#define TM_ERR_TASK_MANAGER_EXIST  		(TASK_MGR_ERRCODE_BASE+1) 
+#define TM_ERR_FILE_NOT_EXIST  				(TASK_MGR_ERRCODE_BASE+2) 
+#define TM_ERR_CFG_FILE_NOT_EXIST  		(TASK_MGR_ERRCODE_BASE+3) 
+#define TM_ERR_INVALID_URL  				(TASK_MGR_ERRCODE_BASE+4)		//4100
+#define TM_ERR_INVALID_FILE_PATH  			(TASK_MGR_ERRCODE_BASE+5) 
+#define TM_ERR_INVALID_FILE_NAME  			(TASK_MGR_ERRCODE_BASE+6) 
+#define TM_ERR_TASK_FULL  					(TASK_MGR_ERRCODE_BASE+7) 
+#define TM_ERR_RUNNING_TASK_FULL  		(TASK_MGR_ERRCODE_BASE+8) 
+#define TM_ERR_INVALID_TCID  				(TASK_MGR_ERRCODE_BASE+9) //4105
+#define TM_ERR_INVALID_FILE_SIZE  			(TASK_MGR_ERRCODE_BASE+10) 
+#define TM_ERR_INVALID_TASK_ID  			(TASK_MGR_ERRCODE_BASE+11) 
+#define TM_ERR_INVALID_DOWNLOAD_TASK  	(TASK_MGR_ERRCODE_BASE+12) 
+#define TM_ERR_TASK_IS_RUNNING  			(TASK_MGR_ERRCODE_BASE+13) 
+#define TM_ERR_TASK_NOT_RUNNING  			(TASK_MGR_ERRCODE_BASE+14) 	//4110
+#define TM_ERR_IVALID_GCID  				(TASK_MGR_ERRCODE_BASE+15) 
+#define TM_ERR_INVALID_PARAMETER  		(TASK_MGR_ERRCODE_BASE+16) 
+#define TM_ERR_NO_TASK  					(TASK_MGR_ERRCODE_BASE+17) 
+#define TM_ERR_RES_QUERY_REQING  			(TASK_MGR_ERRCODE_BASE+18) 
+#define TM_ERR_BUFFER_NOT_ENOUGH  		(TASK_MGR_ERRCODE_BASE+19) 	//4115
+#define TM_ERR_TASK_TYPE  					(TASK_MGR_ERRCODE_BASE+20) 
+#define TM_ERR_TASK_IS_NOT_READY  		(TASK_MGR_ERRCODE_BASE+21) 
+#define TM_ERR_LICENSE_REPORT_FAILED  	(TASK_MGR_ERRCODE_BASE+22) 
+#define TM_ERR_OPERATION_CLASH  			(TASK_MGR_ERRCODE_BASE+23)
+#define TM_ERR_WAIT_FOR_SIGNAL  			(TASK_MGR_ERRCODE_BASE+24)    //4120
+#define TM_ERR_UNKNOWN_SPEED_LIMIT_TYPE	(TASK_MGR_ERRCODE_BASE+25)
+
+/*download_task*/  //(1024 * 4)+100
+#define DT_ERR_UNKNOWN  					(TASK_MGR_ERRCODE_BASE+100)  //4196
+#define DT_ERR_TASK_MANAGER_EXIST  		(TASK_MGR_ERRCODE_BASE+101) 
+#define DT_ERR_FILE_NOT_EXIST  				(TASK_MGR_ERRCODE_BASE+102) 
+#define DT_ERR_CFG_FILE_NOT_EXIST  		(TASK_MGR_ERRCODE_BASE+103) 
+#define DT_ERR_INVALID_URL  				(TASK_MGR_ERRCODE_BASE+104) 	//4200
+#define DT_ERR_INVALID_FILE_PATH  			(TASK_MGR_ERRCODE_BASE+105) 
+#define DT_ERR_INVALID_FILE_NAME  			(TASK_MGR_ERRCODE_BASE+106) 
+#define DT_ERR_TASK_FULL  					(TASK_MGR_ERRCODE_BASE+107) 
+#define DT_ERR_RUNNING_TASK_FULL  		(TASK_MGR_ERRCODE_BASE+108) 
+#define DT_ERR_INVALID_TCID  				(TASK_MGR_ERRCODE_BASE+109)   //4205
+#define DT_ERR_INVALID_FILE_SIZE  			(TASK_MGR_ERRCODE_BASE+110) 
+#define DT_ERR_INVALID_TASK_ID  			(TASK_MGR_ERRCODE_BASE+111) 
+#define DT_ERR_INVALID_DOWNLOAD_TASK  	(TASK_MGR_ERRCODE_BASE+112) 
+#define DT_ERR_TASK_IS_RUNNING  			(TASK_MGR_ERRCODE_BASE+113) 
+#define DT_ERR_TASK_NOT_RUNNING  			(TASK_MGR_ERRCODE_BASE+114) 	//4210
+#define DT_ERR_INVALID_GCID  				(TASK_MGR_ERRCODE_BASE+115) 
+#define DT_ERR_INVALID_PARAMETER  			(TASK_MGR_ERRCODE_BASE+116) 
+#define DT_ERR_NO_TASK  					(TASK_MGR_ERRCODE_BASE+117) 
+#define DT_ERR_RES_QUERY_REQING  			(TASK_MGR_ERRCODE_BASE+118) 
+#define DT_ERR_BUFFER_NOT_ENOUGH  		(TASK_MGR_ERRCODE_BASE+119) 	//4215
+#define DT_ERR_ORIGIN_RESOURCE_EXIST  	(TASK_MGR_ERRCODE_BASE+120) 		
+#define DT_ERR_INVALID_BCID  				(TASK_MGR_ERRCODE_BASE+121) 
+#define DT_ERR_GETTING_ORIGIN_URL  		(TASK_MGR_ERRCODE_BASE+122) 	
+#define DT_ERR_GETTING_CID  				(TASK_MGR_ERRCODE_BASE+123) 	
+#define DT_ERR_TASK_IS_NOT_READY  		(TASK_MGR_ERRCODE_BASE+124)     //4220 
+#define DT_ERR_URL_NOAUTH_DECODE  		(TASK_MGR_ERRCODE_BASE+125) 
+#define DT_ERR_FILE_EXIST  					(TASK_MGR_ERRCODE_BASE+126) 
+#define DT_ERR_INVALID_TASK_TYPE 		(TASK_MGR_ERRCODE_BASE+127) 
+#define DT_ERR_INVALID_RESOURCE_TYPE 		(TASK_MGR_ERRCODE_BASE+128) 
+
+
+/***************************************************************************/
+/*dispatcher*/
+/***************************************************************************/
+#define DISPATCHER_ERRCODE_BASE			(1024 * 5)
+#define DP_ERR_MODE_SWITCH_NOT_SUPPORT  (DISPATCHER_ERRCODE_BASE+1) 
+
+/***************************************************************************/
+/*data_mgr*/
+/***************************************************************************/
+#define DATA_MGR_ERRCODE_BASE			(1024 * 6)
+
+#define ALLOC_INVALID_SIZE                             (DATA_MGR_ERRCODE_BASE +1) 
+#define DATA_BUFFER_IS_FULL                          (DATA_MGR_ERRCODE_BASE +2) 
+#define BLOCK_NO_INVALID                                (DATA_MGR_ERRCODE_BASE +3) 
+#define CHECK_DATA_BUFFER_NOT_ENOUGH     (DATA_MGR_ERRCODE_BASE +4) 
+#define BCID_CHECK_FAIL                                   (DATA_MGR_ERRCODE_BASE +5) 
+#define BCID_ONCE_CHECT_TOO_MUCH               (DATA_MGR_ERRCODE_BASE +6) 
+#define READ_FILE_ERR                                        (DATA_MGR_ERRCODE_BASE +7) 
+
+#define FILE_PATH_TOO_LONG                             (DATA_MGR_ERRCODE_BASE +8) 
+#define SD_INVALID_FILE_SIZE                                 (DATA_MGR_ERRCODE_BASE +9) 
+#define SHUB_FILE_SIZE_INVALID                       (DATA_MGR_ERRCODE_BASE +10) 
+
+#define NO_FILE_PATH                       (DATA_MGR_ERRCODE_BASE +11) 
+#define NO_FILE_NAME                       (DATA_MGR_ERRCODE_BASE +12) 
+
+#define CANNOT_GET_FILE_NAME                       (DATA_MGR_ERRCODE_BASE +13) 
+
+#define CREATE_FILE_FAIL                       (DATA_MGR_ERRCODE_BASE +14) 
+
+#define OPEN_OLD_FILE_FAIL                       (DATA_MGR_ERRCODE_BASE +15) //6159
+
+#define FILE_SIZE_NOT_BELIEVE                       (DATA_MGR_ERRCODE_BASE +16) 
+#define FILE_SIZE_TOO_SMALL                       (DATA_MGR_ERRCODE_BASE +17) 
+
+#define FILE_NOT_EXIST                       (DATA_MGR_ERRCODE_BASE +18) 
+#define FILE_INVALID_PARA                       (DATA_MGR_ERRCODE_BASE +19) 
+
+
+#define FILE_CREATING                      (DATA_MGR_ERRCODE_BASE + 21) 
+
+#define FIL_INFO_INVALID_DATA                      (DATA_MGR_ERRCODE_BASE + 31)   //6175
+#define FIL_INFO_RECVED_DATA                      (DATA_MGR_ERRCODE_BASE + 32)   //6176
+
+#define DM_CAL_CID_NO_BUFFER                       (DATA_MGR_ERRCODE_BASE +50)  //6194
+#define DM_CAL_CID_READ_ERROR                       (DATA_MGR_ERRCODE_BASE +51)
+
+#define FM_CFG_FILE_ERROR                  (DATA_MGR_ERRCODE_BASE +100) //6244
+#define FM_RW_ERROR                        (DATA_MGR_ERRCODE_BASE +101)
+#define FM_LOGIC_ERROR                     (DATA_MGR_ERRCODE_BASE +102)
+#define FM_WRITE_CLOSE_EVENT               (DATA_MGR_ERRCODE_BASE +103)
+#define FM_READ_CLOSE_EVENT                (DATA_MGR_ERRCODE_BASE +104)
+#define FM_NORMAL_CLOSE                    (DATA_MGR_ERRCODE_BASE +105)
+#define FM_BLOCK_MALLOC_ERROR              (DATA_MGR_ERRCODE_BASE +106)
+#define FM_CREAT_CLOSE_EVENT               (DATA_MGR_ERRCODE_BASE +107)
+#define FM_READ_FILE_ERR				   (DATA_MGR_ERRCODE_BASE +108)
+
+
+/***************************************************************************/
+/*connection_mgr*/
+/***************************************************************************/
+#define CONNECTION_MGR_ERRCODE_BASE		(1024 * 7)
+#define CM_ADD_PASSIVE_PEER_WRONG_TIME  (CONNECTION_MGR_ERRCODE_BASE + 1)
+#define CM_ADD_PASSIVE_PEER_EXIST       (CONNECTION_MGR_ERRCODE_BASE + 2)
+#define CM_LOGIC_ERROR                  (CONNECTION_MGR_ERRCODE_BASE + 3) //7171
+#define CM_ADD_SERVER_PEER_EXIST        (CONNECTION_MGR_ERRCODE_BASE + 4)
+#define CM_ADD_ACTIVE_PEER_EXIST        (CONNECTION_MGR_ERRCODE_BASE + 5)
+#define CM_ADD_BT_EXIST                 (CONNECTION_MGR_ERRCODE_BASE + 6)
+#define ERR_RESOURCE_EXIST				(CONNECTION_MGR_ERRCODE_BASE + 7)
+
+
+/***************************************************************************/
+/*res_queryer*/
+/***************************************************************************/
+#define RES_QUERY_ERRCODE_BASE			(1024 * 8)
+#define ERR_RES_QUERY_INVALID_COMMAND	(RES_QUERY_ERRCODE_BASE + 1)
+#define ERR_RES_QUERY_INVALID_PARAM		(RES_QUERY_ERRCODE_BASE + 2)
+#define ERR_RES_QUERY_FAILED			(RES_QUERY_ERRCODE_BASE + 3)
+#define ERR_RES_QUERY_EXTRACT_CMD_FAIL	(RES_QUERY_ERRCODE_BASE + 4)
+#define ERR_RES_QUERY_CMD_TIME_OUT		(RES_QUERY_ERRCODE_BASE + 5)
+#define ERR_RES_QUERY_NO_NEED_QUERY_DPHUB  (RES_QUERY_ERRCODE_BASE + 6)
+#define ERR_RES_QUERY_NO_ROOT           (RES_QUERY_ERRCODE_BASE + 7)
+
+
+/***************************************************************************/
+/*http_pipe*/
+/***************************************************************************/
+#define HTTP_PIPE_ERRCODE_BASE						(1024 * 9)
+#define HTTP_ERR_UNKNOWN  							(HTTP_PIPE_ERRCODE_BASE+1)  //9217
+#define HTTP_ERR_PIPE_NOT_EMPTY   					(HTTP_PIPE_ERRCODE_BASE+2) 
+#define HTTP_ERR_INVALID_PIPE  						(HTTP_PIPE_ERRCODE_BASE+3)
+#define HTTP_ERR_RESOURCE_EMPTY  					(HTTP_PIPE_ERRCODE_BASE+4) //9220
+#define HTTP_ERR_RESOURCE_NOT_HTTP  				(HTTP_PIPE_ERRCODE_BASE+5)
+#define HTTP_ERR_DATA_MANAGER_EMPTY  				(HTTP_PIPE_ERRCODE_BASE+6)
+#define HTTP_ERR_INVALID_URL      					(HTTP_PIPE_ERRCODE_BASE+7)
+#define HTTP_ERR_INVALID_FILE_NAME  				(HTTP_PIPE_ERRCODE_BASE+8)
+#define HTTP_ERR_WAITING_DELETE  					(HTTP_PIPE_ERRCODE_BASE+9)  //9225
+#define HTTP_ERR_WRONG_STATE  						(HTTP_PIPE_ERRCODE_BASE+10)
+#define HTTP_ERR_OPEN_WRONG_STATE 	 				(HTTP_PIPE_ERRCODE_BASE+11)
+#define HTTP_ERR_INVALID_RANGES  					(HTTP_PIPE_ERRCODE_BASE+12)
+#define HTTP_ERR_HEADER_NOT_FOUND   				(HTTP_PIPE_ERRCODE_BASE+13)
+#define HTTP_ERR_STATUS_LINE_NOT_FOUND   			(HTTP_PIPE_ERRCODE_BASE+14)  //9230
+#define HTTP_ERR_STATUS_CODE_NOT_FOUND  			(HTTP_PIPE_ERRCODE_BASE+15)
+#define HTTP_ERR_INVALID_FIELD   					(HTTP_PIPE_ERRCODE_BASE+16)
+#define HTTP_ERR_TO_MUCH_FIELD   					(HTTP_PIPE_ERRCODE_BASE+17)
+#define HTTP_ERR_NO_CONTENT_LEN  					(HTTP_PIPE_ERRCODE_BASE+18)
+#define HTTP_ERR_GETING_BUFFER  					(HTTP_PIPE_ERRCODE_BASE+19)  //9235
+#define HTTP_ERR_STARTING_TIMER  					(HTTP_PIPE_ERRCODE_BASE+20)
+#define HTTP_ERR_INVALID_REDIRECT_URL  				(HTTP_PIPE_ERRCODE_BASE+21)
+#define HTTP_ERR_DATA_FULL 			 				(HTTP_PIPE_ERRCODE_BASE+22)
+#define HTTP_ERR_BAD_TEMP_BUFFER  					(HTTP_PIPE_ERRCODE_BASE+23)
+#define HTTP_ERR_PUTING_DATA  						(HTTP_PIPE_ERRCODE_BASE+24)	//9240
+#define HTTP_ERR_SERVER_DISCONNECTED  				(HTTP_PIPE_ERRCODE_BASE+25)
+#define HTTP_ERR_WRONG_TIME_OUT  					(HTTP_PIPE_ERRCODE_BASE+26)
+#define HTTP_ERR_FILE_NOT_MODIFIED  				(HTTP_PIPE_ERRCODE_BASE+27)
+#define HTTP_ERR_FILE_NOT_FOUND  					(HTTP_PIPE_ERRCODE_BASE+28)
+#define HTTP_ERR_PROXY_AUTH_REQED  					(HTTP_PIPE_ERRCODE_BASE+29)//9245
+#define HTTP_ERR_RANGE_OUT_OF_SIZE  				(HTTP_PIPE_ERRCODE_BASE+30)
+#define HTTP_ERR_INVALID_SERVER_FILE_SIZE  			(HTTP_PIPE_ERRCODE_BASE+31)
+#define HTTP_ERR_BUFFER_NOT_ENOUGH  				(HTTP_PIPE_ERRCODE_BASE+32)
+#define HTTP_ERR_FULL_PATH_TOO_LONG  				(HTTP_PIPE_ERRCODE_BASE+33)
+#define HTTP_ERR_RANGE_NOT_SUPPORT 	 				(HTTP_PIPE_ERRCODE_BASE+34)  //9250
+#define HTTP_ERR_CHUNKED_HEAD_NO_BUFFER  			(HTTP_PIPE_ERRCODE_BASE+35)
+#define HTTP_ERR_REDIRECT_TO_FTP  					(HTTP_PIPE_ERRCODE_BASE+36)
+#define HTTP_ERR_NEED_RETRY_REQUEST  				(HTTP_PIPE_ERRCODE_BASE+37)
+#define HTTP_ERR_INVALID_CONTENT_TYPE  				(HTTP_PIPE_ERRCODE_BASE+38)
+#define HTTP_ERR_FULL_PATH_DECODE  					(HTTP_PIPE_ERRCODE_BASE+39)    //9255
+#define HTTP_ERR_FULL_PATH_ENCODE  					(HTTP_PIPE_ERRCODE_BASE+40)
+#define HTTP_ERR_FULL_PATH_GBK_2_UTF8  				(HTTP_PIPE_ERRCODE_BASE+41)
+#define HTTP_ERR_FULL_PATH_UTF8_2_GBK  				(HTTP_PIPE_ERRCODE_BASE+42)
+#define HTTP_ERR_FULL_PATH_BIG5_2_UTF8  			(HTTP_PIPE_ERRCODE_BASE+43)
+#define HTTP_ERR_FULL_PATH_UNKNOWN_CODE_PAGE		(HTTP_PIPE_ERRCODE_BASE+44)   //9260
+#define HTTP_ERR_UNKNOWN_RRS  						(HTTP_PIPE_ERRCODE_BASE+45)
+#define HTTP_ERR_503_LIMIT_EXCEEDED  				(HTTP_PIPE_ERRCODE_BASE+46)
+#define HTTP_ERR_RELATION_RES_NOT_SUPPORT_RANGE		(HTTP_PIPE_ERRCODE_BASE+47)
+#define HTTP_ERR_SSL_CONNECT						(HTTP_PIPE_ERRCODE_BASE+48)
+#define HTTP_ERR_SSL_CREATE							(HTTP_PIPE_ERRCODE_BASE+49)
+
+
+/***************************************************************************/
+/*ftp_pipe*/
+/***************************************************************************/
+#define FTP_PIPE_ERRCODE_BASE						(1024 * 10)
+#define FTP_ERR_UNKNOWN 							(FTP_PIPE_ERRCODE_BASE+1) //10241
+#define FTP_ERR_PIPE_NOT_EMPTY   					(FTP_PIPE_ERRCODE_BASE+2)
+#define FTP_ERR_INVALID_PIPE   						(FTP_PIPE_ERRCODE_BASE+3) //3
+#define FTP_ERR_DATA_MANAGER_EMPTY   				(FTP_PIPE_ERRCODE_BASE+4) //4
+#define FTP_ERR_RESOURCE_EMPTY   					(FTP_PIPE_ERRCODE_BASE+5) 	//10245
+#define FTP_ERR_INVALID_RESOURCE  					(FTP_PIPE_ERRCODE_BASE+6)
+#define FTP_ERR_INVALID_URL   						(FTP_PIPE_ERRCODE_BASE+7) 
+#define FTP_ERR_WAITING_DELETE   					(FTP_PIPE_ERRCODE_BASE+8) 
+#define FTP_ERR_WRONG_STATE   						(FTP_PIPE_ERRCODE_BASE+9) 
+#define FTP_ERR_OPEN_WRONG_STATE   					(FTP_PIPE_ERRCODE_BASE+10) 	 //10250
+#define FTP_ERR_INVALID_RANGES   					(FTP_PIPE_ERRCODE_BASE+11) 
+#define FTP_ERR_NO_CONTENT_LEN   					(FTP_PIPE_ERRCODE_BASE+12) 
+#define FTP_ERR_GETING_BUFFER   					(FTP_PIPE_ERRCODE_BASE+13) 
+#define FTP_ERR_STARTING_TIMER   					(FTP_PIPE_ERRCODE_BASE+14) 
+#define FTP_ERR_NO_SUCH_DIR   						(FTP_PIPE_ERRCODE_BASE+15) 	 //10255
+#define FTP_ERR_NO_SUPPORT_RANGE   					(FTP_PIPE_ERRCODE_BASE+16) 
+#define FTP_ERR_PUTING_DATA    						(FTP_PIPE_ERRCODE_BASE+17) 
+#define FTP_ERR_SERVER_DISCONNECTED    				(FTP_PIPE_ERRCODE_BASE+18) 
+#define FTP_ERR_WRONG_TIME_OUT    					(FTP_PIPE_ERRCODE_BASE+19) 
+#define FTP_ERR_FILE_NOT_FOUND    					(FTP_PIPE_ERRCODE_BASE+20)	 //10260
+#define FTP_ERR_INVALID_USER    					(FTP_PIPE_ERRCODE_BASE+21) 
+#define FTP_ERR_RANGE_OUT_OF_SIZE    				(FTP_PIPE_ERRCODE_BASE+22) 
+#define FTP_ERR_INVALID_FILE_NAME   				(FTP_PIPE_ERRCODE_BASE+23) 
+#define FTP_ERR_INVALID_COMMAND   					(FTP_PIPE_ERRCODE_BASE+24) 
+#define FTP_ERR_INVALID_RESPONSE   					(FTP_PIPE_ERRCODE_BASE+25)	 //10265
+#define FTP_ERR_RESPONSE_CODE_NOT_FOUNDE   			(FTP_PIPE_ERRCODE_BASE+26) 
+#define FTP_ERR_INVALID_FILE_SIZE   				(FTP_PIPE_ERRCODE_BASE+27) 
+#define FTP_ERR_ENTER_PASV_MODE   					(FTP_PIPE_ERRCODE_BASE+28)
+#define FTP_ERR_INVALID_PASV_MODE_HOST   			(FTP_PIPE_ERRCODE_BASE+29) 
+#define FTP_ERR_451_NOT_FOUND  						(FTP_PIPE_ERRCODE_BASE+30)   //10270
+#define FTP_ERR_INVALID_SERVER_FILE_SIZE  			(FTP_PIPE_ERRCODE_BASE+31)
+#define FTP_ERR_BUFFER_NOT_ENOUGH  					(FTP_PIPE_ERRCODE_BASE+32)
+#define FTP_ERR_RANGE_NOT_SUPPORT  					(FTP_PIPE_ERRCODE_BASE+33)
+#define FTP_ERR_COMMAND_NOT_NEEDED  				(FTP_PIPE_ERRCODE_BASE+34)
+
+
+/***************************************************************************/
+/*p2p_pipe*/
+/***************************************************************************/
+#define P2P_PIPE_ERRCODE_BASE						(1024 * 11)	
+#define ERR_P2P_VERSION_NOT_SUPPORT					(P2P_PIPE_ERRCODE_BASE + 1)	//11265
+#define ERR_P2P_WAITING_CLOSE						(P2P_PIPE_ERRCODE_BASE + 3)
+#define ERR_P2P_HANDSHAKE_RESP_FAIL					(P2P_PIPE_ERRCODE_BASE + 5)
+#define ERR_P2P_REQUEST_RESP_FAIL					(P2P_PIPE_ERRCODE_BASE + 6)
+#define ERR_P2P_UPLOAD_OVER_MAX						(P2P_PIPE_ERRCODE_BASE + 7)	//11271
+#define ERR_P2P_REMOTE_UNKNOWN_MY_CMD				(P2P_PIPE_ERRCODE_BASE + 8)
+#define ERR_P2P_NOT_SUPPORT_UDT						(P2P_PIPE_ERRCODE_BASE + 9)
+#define ERR_P2P_BROKER_CONNECT						(P2P_PIPE_ERRCODE_BASE + 10)
+#define	ERR_P2P_INVALID_COMMAND						(P2P_PIPE_ERRCODE_BASE + 12)	
+#define ERR_P2P_INVALID_PARAM						(P2P_PIPE_ERRCODE_BASE + 13)
+#define	ERR_P2P_CONNECT_FAILED						(P2P_PIPE_ERRCODE_BASE + 15)
+#define	ERR_P2P_CONNECT_UPLOAD_SLOW					(P2P_PIPE_ERRCODE_BASE + 16) //11280
+
+/***************************************************************************/
+/*socket proxy*/
+/***************************************************************************/
+#define SOCKET_PROXY_ERRCODE_BASE					(1024 * 12)
+#define	SP_OUT_OF_MEMORY							(SOCKET_PROXY_ERRCODE_BASE + 1)
+#define SP_INVALID_ARGUMENT							(SOCKET_PROXY_ERRCODE_BASE + 2)
+
+
+
+/***************************************************************************/
+/*upload_mgr*/
+/***************************************************************************/
+#define UPLOAD_MGR_ERRCODE_BASE						(1024 * 13)
+#ifdef UPLOAD_ENABLE
+
+#define ULM_ERR_UNKNOWN 							UPLOAD_MGR_ERRCODE_BASE  //13312
+#define ULM_ERR_ULM_MGR_EXIST  						(UPLOAD_MGR_ERRCODE_BASE+1)
+#define ULM_ERR_ULM_MGR_NOT_EXIST  					(UPLOAD_MGR_ERRCODE_BASE+2)
+#define ULM_ERR_INVALID_FILE_PATH  					(UPLOAD_MGR_ERRCODE_BASE+3) //13315
+#define ULM_ERR_TOO_MANY_PIPES  					(UPLOAD_MGR_ERRCODE_BASE+4)
+#define ULM_ERR_TOO_MANY_FILES  					(UPLOAD_MGR_ERRCODE_BASE+5)
+#define ULM_ERR_INVALID_PIPE_TYPE  					(UPLOAD_MGR_ERRCODE_BASE+6)
+#define ULM_ERR_ISRC_ONLINE_FAILED  				(UPLOAD_MGR_ERRCODE_BASE+7)
+#define ULM_ERR_NOT_NEED_REPORT_RCLIST  			(UPLOAD_MGR_ERRCODE_BASE+8) //13320
+#define ULM_ERR_RCLIST_REPORT_FAILED  				(UPLOAD_MGR_ERRCODE_BASE+9)
+#define ULM_ERR_RECORD_NOT_FOUND  					(UPLOAD_MGR_ERRCODE_BASE+10)
+#define ULM_ERR_FILE_NAME_NOT_FOUND					(UPLOAD_MGR_ERRCODE_BASE+11)
+#define ULM_ERR_FILE_INDEX							(UPLOAD_MGR_ERRCODE_BASE+12)
+#define ULM_ERR_NOT_ALLOW_UPLOAD					(UPLOAD_MGR_ERRCODE_BASE+13)
+
+/* rc_list_manager */
+#define RCLM_ERR_UNKNOWN 							(UPLOAD_MGR_ERRCODE_BASE+100)  //13412
+#define RCLM_ERR_RCLIST_MGR_EXIST  					(UPLOAD_MGR_ERRCODE_BASE+101)
+#define RCLM_ERR_RCLIST_MGR_NOT_EXIST  				(UPLOAD_MGR_ERRCODE_BASE+102)
+#define RCLM_ERR_RCLIST_SLAB_EXIST  				(UPLOAD_MGR_ERRCODE_BASE+103)	//13415
+#define RCLM_ERR_RC_FILE_NOT_EXIST  				(UPLOAD_MGR_ERRCODE_BASE+104)
+#define RCLM_ERR_READING_RC_HEAD  					(UPLOAD_MGR_ERRCODE_BASE+105)
+#define RCLM_ERR_RC_FILE_SIZE  						(UPLOAD_MGR_ERRCODE_BASE+106)
+#define RCLM_ERR_INVALID_RC_FILE_CRC  				(UPLOAD_MGR_ERRCODE_BASE+107)
+#define RCLM_ERR_INVALID_FILE_PATH  				(UPLOAD_MGR_ERRCODE_BASE+108)	//13420
+#define RCLM_ERR_RC_NOT_FOUND  						(UPLOAD_MGR_ERRCODE_BASE+109)	
+#define RCLM_ERR_RC_ALREADY_EXIST  					(UPLOAD_MGR_ERRCODE_BASE+110)
+#define RCLM_ERR_RC_STORE_VERSION  					(UPLOAD_MGR_ERRCODE_BASE+111)
+#define RCLM_ERR_WRITING_FILE  						(UPLOAD_MGR_ERRCODE_BASE+112)
+#define RCLM_ERR_GETTING_FILE_STAT  				(UPLOAD_MGR_ERRCODE_BASE+113)    //13425
+
+/* ulm_file_manager */
+#define UFM_ERR_UNKNOWN 							(UPLOAD_MGR_ERRCODE_BASE+200)  //13512
+#define UFM_ERR_READ_CANCELED						(UPLOAD_MGR_ERRCODE_BASE+201) 
+#define UFM_ERR_READ_OP_NOT_FOUND					(UPLOAD_MGR_ERRCODE_BASE+202) 
+#define UFM_ERR_FILE_STRUCT_NOT_FOUND				(UPLOAD_MGR_ERRCODE_BASE+203) 
+
+/* ulm_pipe_manager */
+#define UPM_ERR_UNKNOWN 							(UPLOAD_MGR_ERRCODE_BASE+300)  //13612
+#define UPM_ERR_PIPE_NOT_FOUND						(UPLOAD_MGR_ERRCODE_BASE+301)  
+#define UPM_ERR_UPM_WAIT_UNINIT						(UPLOAD_MGR_ERRCODE_BASE+302)  
+
+#endif
+
+/***************************************************************************/
+/*conf-file mgr*/
+/***************************************************************************/
+#define CONF_MGR_ERRCODE_BASE						(1024 * 14)
+#define SETTINGS_ERR_UNKNOWN 						CONF_MGR_ERRCODE_BASE     //14336
+#define SETTINGS_ERR_INVALID_FILE_NAME				(CONF_MGR_ERRCODE_BASE+1)	
+#define SETTINGS_ERR_CFG_FILE_NOT_EXIST				(CONF_MGR_ERRCODE_BASE+2)
+#define SETTINGS_ERR_INVALID_LINE					(CONF_MGR_ERRCODE_BASE+3)
+#define SETTINGS_ERR_INVALID_ITEM_NAME				(CONF_MGR_ERRCODE_BASE+4)	 //14340
+#define SETTINGS_ERR_INVALID_ITEM_VALUE				(CONF_MGR_ERRCODE_BASE+5)
+#define SETTINGS_ERR_LIST_EMPTY						(CONF_MGR_ERRCODE_BASE+6)
+#define SETTINGS_ERR_ITEM_NOT_FOUND					(CONF_MGR_ERRCODE_BASE+7)
+
+/***************************************************************************/
+/*bt_download*/
+/***************************************************************************/
+#define BT_DOWNLOAD_ERRCODE_BASE					(1024 * 15) //15360
+#define BT_SEED_FILE_NOT_EXIST						(BT_DOWNLOAD_ERRCODE_BASE + 1)
+#define BT_SEED_PARSE_FAILED						(BT_DOWNLOAD_ERRCODE_BASE + 2)
+#define BT_SEED_TOO_BIG								(BT_DOWNLOAD_ERRCODE_BASE + 3)
+#define BT_ERROR_FILE_INDEX							(BT_DOWNLOAD_ERRCODE_BASE + 4)
+#define BT_DOWNLOAD_DISABLE							(BT_DOWNLOAD_ERRCODE_BASE + 5)
+#define BT_UNSUPPORT_SWITCH							(BT_DOWNLOAD_ERRCODE_BASE + 6)
+#define BT_SEED_READ_ERROR							(BT_DOWNLOAD_ERRCODE_BASE + 7)
+#define BT_UNSUPPORT_SWITCH_TYPE					(BT_DOWNLOAD_ERRCODE_BASE + 8)
+
+#define BT_UNSUPPORT_GBK_2_UTF8						(BT_DOWNLOAD_ERRCODE_BASE + 9)
+#define BT_UNSUPPORT_GBK_2_BIG5						(BT_DOWNLOAD_ERRCODE_BASE + 10)
+
+#define BT_UNSUPPORT_UTF8_2_GBK						(BT_DOWNLOAD_ERRCODE_BASE + 11)
+#define BT_UNSUPPORT_UTF8_2_BIG5					(BT_DOWNLOAD_ERRCODE_BASE + 12)
+
+#define BT_UNSUPPORT_BIG5_2_GBK						(BT_DOWNLOAD_ERRCODE_BASE + 13)
+#define BT_UNSUPPORT_BIG5_2_UTF8					(BT_DOWNLOAD_ERRCODE_BASE + 14)
+#define BT_SEED_WITHOUT_UTF8_STR					(BT_DOWNLOAD_ERRCODE_BASE + 15)
+#define BT_REPEAT_FILE_INDEX						(BT_DOWNLOAD_ERRCODE_BASE + 16)
+#define BT_SEED_LACK_FILE							(BT_DOWNLOAD_ERRCODE_BASE + 17)
+#define BT_DATA_MANAGER_LOGIC_ERROR					(BT_DOWNLOAD_ERRCODE_BASE + 18)
+#define MALLOC_READ_BUFFUR_ERROR					(BT_DOWNLOAD_ERRCODE_BASE + 19)
+#define BT_DATA_MANAGER_READ_DATA_ERROR				(BT_DOWNLOAD_ERRCODE_BASE + 20)
+#define BT_PIECE_NO_INVALID							(BT_DOWNLOAD_ERRCODE_BASE + 21)
+#define BT_PIECE_CHECK_FAILED						(BT_DOWNLOAD_ERRCODE_BASE + 22)
+#define BT_DATA_MANAGER_CANNOT_CORRECT				(BT_DOWNLOAD_ERRCODE_BASE + 23)
+#define BT_FILE_INFO_NULL							(BT_DOWNLOAD_ERRCODE_BASE + 24)
+#define BT_READ_GET_BUFFER_FAIL						(BT_DOWNLOAD_ERRCODE_BASE + 25)
+#define BT_DATA_CHECK_GCID_ERROR					(BT_DOWNLOAD_ERRCODE_BASE + 26)
+#define BT_RANGE_TOO_SMALL							(BT_DOWNLOAD_ERRCODE_BASE + 27)
+#define BT_RANGE_TOO_BIG							(BT_DOWNLOAD_ERRCODE_BASE + 28)
+#define BT_COMMON_FILE_TOO_SLOW						(BT_DOWNLOAD_ERRCODE_BASE + 29)
+
+#define	BT_INVALID_CMD								(BT_DOWNLOAD_ERRCODE_BASE + 30)
+#define BT_PIPE_GET_DATA_BUFFER_FAILED				(BT_DOWNLOAD_ERRCODE_BASE + 31)
+#define BT_CREATE_FILE_LATER						(BT_DOWNLOAD_ERRCODE_BASE + 32)
+#define BT_DATA_CHECK_CID_ERROR						(BT_DOWNLOAD_ERRCODE_BASE + 33)
+#define BT_FILE_CREATE_ERROR						(BT_DOWNLOAD_ERRCODE_BASE + 34)
+#define BT_FILE_DOWNLOAD_SUCCESS_WAIT_CHECK			(BT_DOWNLOAD_ERRCODE_BASE + 35)
+#define BT_DATA_CHECK_CID_NO_BUFFER					(BT_DOWNLOAD_ERRCODE_BASE + 36)
+#define BT_DATA_CHECK_BCID_NO_BUFFER				(BT_DOWNLOAD_ERRCODE_BASE + 37)
+#define BT_VOD_WAIT_CLOSE							(BT_DOWNLOAD_ERRCODE_BASE + 38)
+#define BT_VOD_WAIT_OPEN							(BT_DOWNLOAD_ERRCODE_BASE + 39)
+#define BT_SUB_FILE_FAILED							(BT_DOWNLOAD_ERRCODE_BASE + 40)
+#define BT_FILE_TOO_SMALL							(BT_DOWNLOAD_ERRCODE_BASE + 41)
+#define BT_PIPE_READER_FULL							(BT_DOWNLOAD_ERRCODE_BASE + 42)
+#define BT_DATA_MANAGER_ERR_TIME					(BT_DOWNLOAD_ERRCODE_BASE + 43)
+#define	BT_NOT_IN_TMP_FILE							(BT_DOWNLOAD_ERRCODE_BASE + 44)
+#define	BT_RANGE_NOT_IN_DISK						(BT_DOWNLOAD_ERRCODE_BASE + 45)
+#define	BT_DATA_GET_CID_ERROR						(BT_DOWNLOAD_ERRCODE_BASE + 46)
+#define	BT_SEED_READ_BUFFER_TOO_SMALL				(BT_DOWNLOAD_ERRCODE_BASE + 47)
+#define	BT_FILE_INDEX_NOT_DOWNLOAD					(BT_DOWNLOAD_ERRCODE_BASE + 48)
+#define BT_PIPE_RECV_PIECE_DATA						(BT_DOWNLOAD_ERRCODE_BASE + 49)
+#define BT_VOD_FILE_DOWNLODD_FINISHED				(BT_DOWNLOAD_ERRCODE_BASE + 50)
+
+#define BT_MAGNET_INVALID_TASK_ID					(BT_DOWNLOAD_ERRCODE_BASE + 51)
+#define BT_MAGNET_INVALID_URL						(BT_DOWNLOAD_ERRCODE_BASE + 52)
+#define BT_MAGNET_SUCCESS							(BT_DOWNLOAD_ERRCODE_BASE + 53)
+#define BT_MAGNET_FAILED							(BT_DOWNLOAD_ERRCODE_BASE + 54)
+#define BT_MAGNET_CORE_INIT_FAILED					(BT_DOWNLOAD_ERRCODE_BASE + 55)//15415
+#define BT_MAGNET_MSG_TYPE_NOT_SUPPORT				(BT_DOWNLOAD_ERRCODE_BASE + 56)
+#define BT_MAGNET_CORE_TASK_NOT_READY				(BT_DOWNLOAD_ERRCODE_BASE + 57)
+#define BT_SEED_BAD_ENCODING						(BT_DOWNLOAD_ERRCODE_BASE + 58)
+
+/***************************************************************************/
+/* reporter and license*/
+/***************************************************************************/
+#define REPORTER_ERRCODE_BASE						(1024 * 16)
+#define REPORTER_ERR_UNKNOWN  					REPORTER_ERRCODE_BASE   //16384
+#define REPORTER_ERR_BUILD_DW_STAT 				(REPORTER_ERRCODE_BASE+1)	//16385
+#define REPORTER_ERR_BUILD_DW_FAIL				(REPORTER_ERRCODE_BASE+2)
+#define REPORTER_ERR_BUILD_INSERTSRES				(REPORTER_ERRCODE_BASE+3)	
+#define REPORTER_ERR_BUILD_LICENSE				(REPORTER_ERRCODE_BASE+4)
+#define REPORTER_ERR_UNKNOWN_DEVICE_TYPE		(REPORTER_ERRCODE_BASE+5)
+#define REPORTER_ERR_UNKNOWN_COMMAND_TYPE		(REPORTER_ERRCODE_BASE+6)	//16390
+#define REPORTER_ERR_INVALID_TOTAL_LEN			(REPORTER_ERRCODE_BASE+7)
+#define REPORTER_ERR_INVALID_ITEMS_COUNT			(REPORTER_ERRCODE_BASE+8)
+#define REPORTER_ERR_INVALID_RULE_LEN				(REPORTER_ERRCODE_BASE+9)
+#define REPORTER_ERR_INVALID_EXPIRE_TIME_LEN		(REPORTER_ERRCODE_BASE+10)
+#define REPORTER_ERR_INVALID_INTERVAL_LEN		(REPORTER_ERRCODE_BASE+11) //16395
+#ifdef UPLOAD_ENABLE
+#define REPORTER_ERR_BUILD_RC_ONLINE				(REPORTER_ERRCODE_BASE+12)
+#define REPORTER_ERR_BUILD_RC_LIST				(REPORTER_ERRCODE_BASE+13)
+#define REPORTER_ERR_BUILD_INSERT_RC				(REPORTER_ERRCODE_BASE+14)
+#define REPORTER_ERR_BUILD_DELETE_RC				(REPORTER_ERRCODE_BASE+15)
+#endif
+#define REPORTER_ERR_INVALID_LAST_CMD			(REPORTER_ERRCODE_BASE+16) //16400
+#define REPORTER_ERR_RETRY_TOO_MANY_TIMES		(REPORTER_ERRCODE_BASE+17)
+#define REPORTER_ERR_GET_CID						(REPORTER_ERRCODE_BASE+18)
+#define REPORTER_ERR_GET_URL						(REPORTER_ERRCODE_BASE+19)
+#define REPORTER_ERR_GET_GCID						(REPORTER_ERRCODE_BASE+20)
+#define REPORTER_ERR_GET_FILE_NAME				(REPORTER_ERRCODE_BASE+21) //16405
+#define REPORTER_ERR_GET_BCID						(REPORTER_ERRCODE_BASE+22)
+#ifdef ENABLE_BT
+#define REPORTER_ERR_BUILD_BT_INSERT_RES			(REPORTER_ERRCODE_BASE+23)
+#define REPORTER_ERR_BUILD_BT_DL_STAT			(REPORTER_ERRCODE_BASE+24)
+#define REPORTER_ERR_BUILD_BT_TASK_DL_STAT		(REPORTER_ERRCODE_BASE+25)
+#endif /* ENABLE_BT */
+#define REPORTER_ERR_TASK_TYPE		             (REPORTER_ERRCODE_BASE+26)
+
+#ifdef EMBED_REPORT
+#define REPORTER_ERR_BUILD_EMB_REPORT		    (REPORTER_ERRCODE_BASE+27)
+
+#endif /* EMBED_REPORT */
+
+
+/***************************************************************************/
+/*p2p_transfer_layer*/
+/***************************************************************************/
+#define	ERR_UDT_RESET							(1024 * 17)	//17408
+#define	ERR_UDT_RECV_TIMEOUT					(1024 * 17 + 100)
+#define	ERR_PTL_TRY_UDT_CONNECT				(1024 * 17 + 200)
+#define	ERR_PTL_PROTOCOL_VERSION				(1024 * 17 + 300)
+#define	ERR_PTL_PROTOCOL_NOT_SUPPORT		(1024 * 17 + 400)
+#define	ERR_PTL_PEER_OFFLINE					(1024 * 17 + 500)		//对端peer不在线
+#define	ERR_PTL_GET_PEERSN_FAILED			(1024 * 17 + 600)
+
+/***************************************************************************/
+/*vod_data_manager*/
+/***************************************************************************/
+#define	VOD_DATA_MANAGER_ERRCODE_BASE			  (1024 * 18)	//18432
+#define   ERR_VOD_DATA_SUCCESS                                      (VOD_DATA_MANAGER_ERRCODE_BASE + 100) ///18532
+#define   ERR_VOD_DATA_BUFFER_NOT_FOUND                  (VOD_DATA_MANAGER_ERRCODE_BASE+101)
+#define   ERR_VOD_DATA_OP_IN_PROGRESS                        (VOD_DATA_MANAGER_ERRCODE_BASE+ 102)
+#define   ERR_VOD_DATA_OP_INTERUPT                              (VOD_DATA_MANAGER_ERRCODE_BASE + 103)  //18535
+#define   ERR_VOD_DATA_FETCH_TIMEOUT                          (VOD_DATA_MANAGER_ERRCODE_BASE+ 104)
+#define   ERR_VOD_DATA_UNKNOWN_TASK                          (VOD_DATA_MANAGER_ERRCODE_BASE+ 105)
+#define   ERR_VOD_DATA_BUFFER_TOO_BIG                        (VOD_DATA_MANAGER_ERRCODE_BASE+ 106)
+#define   ERR_VOD_DATA_NOT_IN_FETCH_STATE                 (VOD_DATA_MANAGER_ERRCODE_BASE+ 107)
+#define   ERR_VOD_DATA_TASK_STOPPED                             (VOD_DATA_MANAGER_ERRCODE_BASE+ 108) //18540
+#define   ERR_VOD_ALREADY_HAVE_INDEX                            (VOD_DATA_MANAGER_ERRCODE_BASE+ 109) 
+#define   ERR_VOD_DATA_MANAGER_NOT_EMPTY                           (VOD_DATA_MANAGER_ERRCODE_BASE+ 110)
+#define   ERR_VOD_DATA_BUFFER_ALLOCATED                           (VOD_DATA_MANAGER_ERRCODE_BASE+ 111)
+#define   ERR_VOD_DATA_BUFFER_SIZE_TOO_SMALL                   (VOD_DATA_MANAGER_ERRCODE_BASE+ 112)
+#define   ERR_VOD_DATA_MANAGER_NOT_FOUND              (VOD_DATA_MANAGER_ERRCODE_BASE+ 113)
+#define   ERR_VOD_IS_DISABLED                                       (VOD_DATA_MANAGER_ERRCODE_BASE+ 114)
+#define   ERR_VOD_INDEX_FILE_HEAD_TOO_SMALL            (VOD_DATA_MANAGER_ERRCODE_BASE + 115)
+#define   ERR_VOD_DATA_BITRATE_NOT_FOUND                 (VOD_DATA_MANAGER_ERRCODE_BASE + 116)
+#define   ERR_VOD_BT_CORE_TASK_NOT_READY				(VOD_DATA_MANAGER_ERRCODE_BASE + 117)
+
+/***************************************************************************/
+/*dk query*/
+/***************************************************************************/
+
+#define	DK_QUERY_ERRCODE_BASE			       ( 1024 * 19 )	//19456
+#define	DK_LOGIC_ERR                           ( DK_QUERY_ERRCODE_BASE+1 )	//19457
+
+#define	KAD_PROTOCAL_ERR			           ( DK_QUERY_ERRCODE_BASE+2 )	//19458
+#define	KAD_NODE_ID_ERR			                ( DK_QUERY_ERRCODE_BASE+3 )	//19459
+#define	DK_TASK_EXIST                           ( DK_QUERY_ERRCODE_BASE+4 )	//19460
+#define	ROUTING_TABLE_NULL                      ( DK_QUERY_ERRCODE_BASE+5 )	//19461
+#define	DK_SIMI_FILE_ID                        ( DK_QUERY_ERRCODE_BASE+6 )	
+#define	DK_UNSUPPORT_ZLIB                        ( DK_QUERY_ERRCODE_BASE+7 )	
+
+/***************************************************************************/
+/*emule*/
+/***************************************************************************/
+
+#define	EMULE_ERRCODE_BASE			        (1024 * 20)	//20480
+#define	EMULE_SEND_DATA_WAIT                (EMULE_ERRCODE_BASE+1)	
+#define	EMULE_ED2K_LINK_ERR                 (EMULE_ERRCODE_BASE+2)	
+#define EMULE_DOWNLOAD_DISABLE              (EMULE_ERRCODE_BASE+3)
+#define EMULE_FILE_NAME_ERR                 (EMULE_ERRCODE_BASE+4)
+#define EMULE_PIPE_RECV_UNKNOWN_CMD         (EMULE_ERRCODE_BASE+5)
+#define EMULE_PIPE_RECV_ILLEGAL_CMD         (EMULE_ERRCODE_BASE+6)
+#define EMULE_NO_DATA_MANAGER               (EMULE_ERRCODE_BASE+7)
+#define EMULE_LOCAL_PURE_UPLOAD             (EMULE_ERRCODE_BASE+8)
+#define EMULE_TASK_HAS_BEEN_PAUSED          (EMULE_ERRCODE_BASE+9)
+#define EMULE_TASK_HAS_BEEN_FINISHED        (EMULE_ERRCODE_BASE+10)
+#define EMULE_UNKNOWN_SERVER_CMD            (EMULE_ERRCODE_BASE+11)
+
+/***************************************************************************/
+/*  cmd proxy*/
+/***************************************************************************/
+#define	CMD_PROXY_BASE			       ( 1024 * 21 )	//21504
+#define	HOST_TOO_LENG                   ( CMD_PROXY_BASE+1 )	
+#define	INVALID_CMD_PROXY_ID           ( CMD_PROXY_BASE+2 )	
+#define	INVALID_RECV_CMD_ID            ( CMD_PROXY_BASE+3 )	
+#define	INVALID_RECV_CMD_BUFFER        ( CMD_PROXY_BASE+4 )	
+#define	UNSUPPORT_TYPE                 ( CMD_PROXY_BASE+5 )	
+#define	SEND_CMD_FULL                  ( CMD_PROXY_BASE+6 )	
+#define	CMD_PROXY_EXTRACT_CMD_FAIL     ( CMD_PROXY_BASE+7 )	
+
+
+
+/***************************************************************************/
+/*  drm  */
+/***************************************************************************/
+#define	DRM_BASE			            ( 1024 * 22 )	//22528
+#define	DRM_NO_FILE                     ( DRM_BASE+1 )	
+#define	DRM_OPRN_ERR                    ( DRM_BASE+2 )	
+#define	DRM_READ_ERR                    ( DRM_BASE+3 )	
+#define	DRM_FILE_FORMAT_ERR             ( DRM_BASE+4 )	
+#define	DRM_CERTIFICATE_NOT_OK          ( DRM_BASE+5 ) //22533
+#define	DRM_INVALID_ID                  ( DRM_BASE+6 )
+#define	DRM_CERTIFICATE_DOWNLOAD_ERR    ( DRM_BASE+7 )
+#define	DRM_LOGIC_ERR                   ( DRM_BASE+8 )
+#define	DRM_CERTIFICATE_FORMAT_ERR      ( DRM_BASE+9 )
+#define	DRM_UNSUPPORT_OPENSSL           ( DRM_BASE+10 )
+
+
+#define	DRM_USER_NOT_FOUND_ERR          ( DRM_BASE+100 ) //22628
+#define	DRM_NOT_BOUGHT_ERR              ( DRM_BASE+101 ) 
+#define	DRM_NOT_ON_SALE_ERR             ( DRM_BASE+102 )
+#define	DRM_PEERID_BIND_ERR             ( DRM_BASE+103 )
+#define	DRM_KEY_NOT_FOUND_ERR           ( DRM_BASE+104 )
+#define	DRM_SERVER_BUSY_ERR             ( DRM_BASE+105 )
+#define	DRM_BERYL_FREE_PRODUCT_ERR      ( DRM_BASE+106 )
+#define	DRM_BERY_TRIAL_NOT_FREE_ERROR      ( DRM_BASE+107 )
+
+#define	DRM_UNKNOWN_SERVER_ERR      	( DRM_BASE+108 )
+
+
+/***************************************************************************/
+/*  high speed channel  */
+/***************************************************************************/
+#define HSC_BASE							(1024 * 23) //23552
+#define HSC_NOT_AVAILABLE					(HSC_BASE + 1)
+#define HSC_UNDERFED	/* 流量不足 */	(HSC_BASE + 2)
+#define HSC_BOUND_ACCOUNT_NOT_FOUND		(HSC_BASE + 3)
+#define HSC_PQ_PUT_DATA_TASK_NOT_FOUND	(HSC_BASE + 4)
+#define HSC_IN_USE							(HSC_BASE + 5)
+
+#define HSC_NOT_IN_USE						(HSC_BASE + 6)//23558
+#define HSC_BT_NOT_AVAILABLE				(HSC_BASE + 7)
+#define HSC_IS_ENTERING					(HSC_BASE + 8)
+#define HSC_PQ_PUT_DATA_ERR				(HSC_BASE + 9)
+#define HSC_PQ_PIPE_FAILURE				(HSC_BASE + 10)
+
+
+/***************************************************************************/
+/*  lixian  */
+/***************************************************************************/
+/*
+ * error code with 1023*24 have been used by lixian
+ */
+
+/***************************************************************************/
+/*  http server  */
+/***************************************************************************/
+#define	HS_BASE			            ( 1024 * 25 )	//25600
+#define	HS_REJECT                     		( HS_BASE+1 )	
+#define	HS_CANCEL                   	 	( HS_BASE+2 )	
+#define	HS_NO_SPACE_ON_DISK          ( HS_BASE+3 )	
+#define	HS_FILE_EXIST             		( HS_BASE+4 )	
+#define	HS_WRONG_CONTENT_TYPE          ( HS_BASE+5 ) //25605
+#define	HS_TIME_OUT                  			( HS_BASE+6 )
+
+#define	HS_SEARCH_INVALID_PARAMETER		( HS_BASE+7 )//25607
+#define	HS_SEARCH_INVALID_STATE			( HS_BASE+8 )
+#define	HS_SEARCH_SOCKETFD_USED_UP 		( HS_BASE+9 )
+#define	HS_SEARCH_INVALID_LOCAL_IP		( HS_BASE+10)
+#define	HS_SEARCH_INVALID_NETMASK		( HS_BASE+11)
+#define	HS_SEARCH_HAVE_NOT_STARTED		( HS_BASE+12)
+
+#define	HS_NOT_SUPPORT_COMMAND_TYPE		( HS_BASE+13)
+#define	HS_AUTHRIZATION_FAILURED		( HS_BASE+14)
+#define	HS_BEYOND_MAX_LEN		( HS_BASE+15)
+#define	HS_BAD_COMMAND_FORMAT		( HS_BASE+16)
+#define	HS_READ_FILE_WRONG		( HS_BASE+17)
+#define	HS_WRITE_FILE_WRONG		( HS_BASE+18)
+
+#define	HS_ACTION_NOT_FOUND		( HS_BASE+19)	
+#define	HS_FILE_NO_EXIST		( HS_BASE+20)
+#define	HS_INVALID_PATH		( HS_BASE+21)
+#define	HS_DIR_NOT_EXIST		( HS_BASE+22)
+#define	HS_DIR_IS_EMPTY		( HS_BASE+23)
+#define	HS_FILE_PATH_ERROR		( HS_BASE+24)
+#define	HS_HAS_TMP_FILE		( HS_BASE+25)
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

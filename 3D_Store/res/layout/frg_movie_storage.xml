@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_background"
+    android:orientation="vertical" >
+
+    <com.runmit.sweedee.view.MovieScrollListView
+        android:id="@+id/gv_movie_storage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="12dp"
+        android:scrollbars="none"
+        android:fastScrollEnabled="false" />
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/rl_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

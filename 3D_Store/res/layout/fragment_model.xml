@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_back_ground" >
+   
+    <com.runmit.sweedee.view.MyListView
+        android:id="@+id/model_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:listSelector="@drawable/apk_list_selector"
+        android:overScrollMode="never"
+        android:scrollingCache="false" />
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.runmit.sweedee"
+    android:versionCode="123"
+    android:versionName="1.7.0.13"
+    android:installLocation="auto">
+
+   <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+<!--     <uses-permission android:name="android.permission.READ_SMS" /> -->
+<!--     <uses-permission android:name="android.permission.WRITE_SMS" /> -->
+<!--     <uses-permission android:name="android.permission.SEND_SMS" /> -->
+<!--     <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> 
+	<uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.CAMERA"/>
+    
+    <application
+        android:name="com.runmit.sweedee.StoreApplication"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme">
+        
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".LoadingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.runmit.sweedee.player.PlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity
+            android:name=".action.more.SettingItemActivity"
+            android:label="@string/setting"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".action.more.FeedBackActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="@string/suggest"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.more.AboutActivity"
+            android:label="@string/aboutus"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.runmit.sweedee.action.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/CustomActionBarTheme"
+            android:label="@string/login" />
+        <activity
+            android:name=".action.login.AgreementActivity"
+            android:label="@string/regist_perrmision"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.runmit.sweedee.action.login.RegisterActivity"
+            android:label="@string/regist_account"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" />
+        <activity
+            android:name="com.runmit.sweedee.action.login.RegetPassword"
+            android:label="@string/reget_password"
+            android:screenOrientation="portrait"/>
+        <!-- android:theme="@android:style/Theme.Dialog" -->
+        <activity
+            android:name=".action.myvideo.MyVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/my_3d_movie"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" />
+        <activity
+            android:name=".TdStoreMainActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/HomeStyle"
+             >
+
+        </activity>
+
+        <activity
+            android:name="com.runmit.sweedee.action.pay.PayMovieActivity"
+            android:label="@string/pay_movie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.runmit.sweedee.action.pay.PayPalActivity"
+            android:label="@string/pay_movie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".action.pay.MyWalletActivity"
+            android:label="@string/my_wallet"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name=".action.pay.RechargeActivity"
+            android:label="@string/recharge"
+            android:screenOrientation="portrait" />
+         
+        <activity
+            android:name=".action.pay.PayStyleActivity"
+            android:label="@string/pay_movie"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" />
+                
+        <activity
+            android:name=".DetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.runmit.sweedee.action.game.AppDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".action.search.SearchActivity"
+            android:label="@string/title_activity_search_resource"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/SearchPageStyle"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        	
+        </activity>
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.unionpay.uppay.PayActivity"></activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="54b89b17fd98c56aab00024b"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+        <activity android:name=".action.more.UserAndSettingActivity" 
+            android:label="@string/user_center"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        
+        
+<!--         <activity android:name="com.skymobi.pay.sdk.SkyPayActivity" -->
+<!--     	    android:label="@string/app_name" -->
+<!--     	    android:configChanges="orientation|navigation|keyboardHidden|keyboard" -->
+<!--     	    android:theme="@style/transparent"> -->
+<!-- 		</activity> -->
+<!-- 		<activity android:name="com.skymobi.pay.third.activity.impl.EnterChargeCenter" -->
+<!-- 		    android:label="@string/app_name" -->
+<!-- 		    android:windowSoftInputMode="adjustPan" -->
+<!-- 		    android:configChanges="orientation|navigation|keyboardHidden|keyboard" -->
+<!-- 		    android:theme="@style/transparent"> -->
+<!-- 			<intent-filter> -->
+<!-- 				<action android:name="android.intent.action.MAIN"> -->
+<!-- 				</action> -->
+<!-- 				<category android:name="android.intent.category.DEFAULT"> -->
+<!-- 				</category> -->
+<!-- 			</intent-filter> -->
+<!-- 		</activity> -->
+<!-- 		<activity android:name="com.skymobi.pay.third.activity.impl.QueryChargeResultActivity" -->
+<!-- 		    android:label="@string/app_name" -->
+<!-- 		    android:configChanges="orientation|navigation|keyboardHidden|keyboard" -->
+<!-- 		    android:screenOrientation="behind" -->
+<!-- 		    android:theme="@style/transparent"> -->
+<!-- 		</activity> -->
+<!-- 		<activity android:name="com.skymobi.pay.third.activity.impl.HelpActivity" -->
+<!-- 		    android:label="@string/app_name" -->
+<!-- 		    android:configChanges="orientation|navigation|keyboardHidden|keyboard" -->
+<!-- 		    android:screenOrientation="behind" -->
+<!-- 		    android:theme="@style/transparent"> -->
+<!-- 		</activity> -->
+<!-- 		<service android:name="com.skymobi.pay.sms.service.SmsService"> -->
+<!-- 		</service> -->
+<!-- 		<service android:name="com.skymobi.pay.sms.service.SynService"> -->
+<!-- 		</service> -->
+<!-- 		<service android:name="com.skymobi.pay.common.service.PayCtrlService"> -->
+<!-- 		</service> -->
+<!-- 		<service android:name="com.skymobi.pay.services.SkyPayRemoteService"> -->
+<!-- 			<intent-filter> -->
+<!-- 				<action android:name="com.skymobi.pay.sdk.ISkyPayRemoteService"> -->
+<!-- 				</action> -->
+<!-- 			</intent-filter> -->
+<!-- 		</service> -->
+<!-- 		<service android:name="com.skymobi.pay.third.service.CheckResultBackgroundService"> -->
+<!-- 		</service> -->
+<!-- 		<receiver android:name="com.skymobi.pay.sms.receiver.BootReceiver"> -->
+<!-- 			<intent-filter android:priority="2147483647"> -->
+<!-- 				<action android:name="android.intent.action.BATTERY_CHANGED"/> -->
+<!-- 				<action android:name="android.intent.action.SIM_STATE_CHANGED"/> -->
+<!-- 				<action android:name="android.intent.action.NOTIFICATION_ADD"/> -->
+<!-- 				<action android:name="android.intent.action.SERVICE_STATE"/> -->
+<!-- 				<action android:name="android.intent.action.NOTIFICATION_REMOVE"/> -->
+<!-- 				<action android:name="android.intent.action.NOTIFICATION_UPDATE"/> -->
+<!-- 				<action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/> -->
+<!-- 				<action android:name="android.net.wifi.WIFI_STATE_CHANGED"/> -->
+<!-- 				<action android:name="android.intent.action.ANY_DATA_STATE"/> -->
+<!-- 				<action android:name="android.net.wifi.STATE_CHANGE"/> -->
+<!-- 				<action android:name="android.intent.action.BOOT_COMPLETED"/> -->
+<!-- 				<category android:name="android.intent.category.DEFAULT"/> -->
+<!-- 				<action android:name="android.intent.action.SCREEN_ON"/> -->
+<!-- 				<action android:name="android.intent.action.USER_PRESENT"/> -->
+<!-- 			</intent-filter> -->
+<!-- 		</receiver> -->
+<!-- 		<receiver android:name="com.skymobi.pay.sms.receiver.SmsReceiver"> -->
+<!-- 			<intent-filter android:priority="2147483647"> -->
+<!-- 				<action android:name="android.provider.Telephony.SMS_RECEIVED"/> -->
+<!-- 			</intent-filter> -->
+<!-- 		</receiver> -->
+<!-- 		<receiver android:name="com.skymobi.pay.sms.receiver.NetworkReceiver"> -->
+<!-- 			<intent-filter android:priority="2147483647"> -->
+<!-- 				<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/> -->
+<!-- 			</intent-filter> -->
+<!-- 		</receiver> -->
+
+ 		<receiver android:name="com.runmit.sweedee.download.MyAppInstallerReceiver" >  
+            <intent-filter>  
+                <action android:name="android.intent.action.PACKAGE_ADDED" />  
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />  
+                <data android:scheme="package" />  
+            </intent-filter>  
+        </receiver>
+        
+        <activity
+            android:name=".action.more.MyThreedGameActivity"
+            android:label="@string/my_threedgame"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme" >
+            <intent-filter>
+                <action android:name="com.runmit.sweedee.action.more.MyThreedGameActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+		<activity android:name=".action.more.MyThreeDAppActivity"
+            android:label="@string/my_threedapp"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"/>
+		
+		<activity android:name=".action.movie.MovieCatalogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"/>
+		
+		<activity android:name=".action.more.TaskAndUpdateActivity"
+		    android:label="@string/taskandupdate"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"/>
+		<provider
+            android:name="com.runmit.sweedee.provider.GameConfigProvider"
+            android:exported="true"
+            android:authorities="com.runmit.sweedee.gameConfigProvider" >
+        </provider>
+		<activity android:name=".action.pay.paypassword.ChangePayPasswordActivity"
+		    android:label="@string/change_pay_password"></activity>
+		<activity android:name=".action.pay.paypassword.ForgetPayPasswordActivity"
+		    android:label="@string/forget_pay_password"></activity>
+		<activity android:name=".action.pay.paypassword.PayPasswordTypeActivity"
+		    android:label="@string/manager_pay_password"></activity>
+		<activity android:name=".action.pay.paypassword.SettingPayPasswordActivity"
+		    android:label="@string/setting_pay_password"></activity>
+		
+		<!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <!-- alipay sdk end -->
+		    
+    </application>
+    <!-- junit test -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for My App"
+        android:targetPackage="com.runmit.sweedee" />
+
+</manifest>

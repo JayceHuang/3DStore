@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_back_ground" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/regist_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="15dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/list_bg" >
+
+                <TextView
+                    android:id="@+id/regist_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/editTextEmail"
+                    android:layout_alignBottom="@+id/editTextEmail"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/regist_email"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@+id/regist_email"
+                    android:background="@null"
+                    android:hint="@string/regist_edit_email_hint"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+            
+            <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="9dip"
+            android:text="@string/register_invalid_email_tip"
+            android:textColor="@color/title_color"
+            android:textSize="12sp" />
+            <RelativeLayout
+                android:id="@+id/nicknameLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/list_bg" >
+
+                <TextView
+                    android:id="@+id/regist_nicky"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="9dip"
+                    android:gravity="center_vertical"
+                    android:text="@string/regist_nicky"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextNick"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@+id/regist_nicky"
+                    android:background="@null"
+                    android:hint="@string/regist_edit_nicky_hint"
+                    android:inputType="textUri"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+                </EditText>
+            </RelativeLayout>
+            
+              <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="9dip"
+            android:text="@string/register_nickname_tip"
+            android:textColor="@color/title_color"
+            android:textSize="12sp" />
+            
+
+            <RelativeLayout
+                android:id="@+id/editTextPswLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/list_bg" >
+
+                <TextView
+                    android:id="@+id/regist_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/regist_password"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/psw_switch_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="9dip"
+                    android:background="@drawable/ic_eye_off"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/psw_switch_layout"
+                    android:layout_toRightOf="@+id/regist_password"
+                    android:background="@null"
+                    android:hint="@string/regist_edit_password_hint"
+                    android:inputType="textPassword"
+                    android:maxEms="16"
+                    android:singleLine="true"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textColorHint="@color/title_color"
+                    android:textSize="16sp" >
+                </EditText>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/list_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/select_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_setting_ltem_selector"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_select_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="9dip"
+                    android:text="@string/regist_select_location"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textviewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_toRightOf="@+id/tv_select_location"
+                    android:textColor="@color/game_tabs_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="9dp"
+                    android:src="@drawable/drop_down_triangle_selector" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/agree_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dip"
+            android:text="@string/regist_perrmision"
+            android:textColor="@color/thin_blue"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dip"
+            android:layout_marginRight="9dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/button_green_selector"
+            android:text="@string/agree_and_regist"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        
+    </LinearLayout>
+
+</ScrollView>

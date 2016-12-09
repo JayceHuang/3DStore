@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_friend_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/about_logo_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/about_logo" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/version_lauout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_logo_layout"
+        android:layout_marginTop="20dip"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_version"
+            android:textColor="#303036"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/version_lauout"
+            android:id="@+id/agree_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regist_perrmision"
+            android:textColor="@color/thin_blue"
+            android:textSize="14sp" />
+    </LinearLayout>
+   
+    <Button
+        android:id="@+id/check_update_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/version_lauout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dip"
+        android:background="@drawable/blue_btn_selector"
+        android:minHeight="43dip"
+        android:minWidth="135dip"
+        android:text="@string/check_update"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/qq_group_by_app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/qq_group_by_app"
+                android:textColor="@color/tab_txt_unselect"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/qq_group_by_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="171874973"
+                android:textColor="@drawable/text_color_selector"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/email_group_by_app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_group_by_app"
+                android:textColor="@color/tab_txt_unselect"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/email_group_by_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kf@runmit.com"
+                android:textColor="@drawable/text_color_selector"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dip"
+            android:text="@string/conpany_info"
+            android:textColor="@color/tab_txt_unselect"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text="@string/copyright"
+            android:textColor="@color/tab_txt_unselect"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_testMode"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:minWidth="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        android:paddingRight="10dp"/>
+
+</RelativeLayout>

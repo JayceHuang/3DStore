@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white_back_ground">#f0f0f0</color>
+    <color name="black_background">#050506</color>
+    <color name="transparent">#00000000</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="setting_item_pressed">#19000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#999999</color>
+    <color name="background_green">#E2F0B6</color>
+    <color name="transparent_bg">#50000000</color>
+    <color name="title_color">#999999</color>
+    <color name="tab_txt_unselect">#999999</color>
+    <color name="list_title_text_color">#999</color>
+    <color name="message_text_color">#666666</color>
+    <color name="game_tabs_text_color">#040910</color>
+    <color name="all_list_background">#dddddd</color>
+    <color name="vod_info_txt_color">#555555</color>
+    <color name="resolution_not_supported">#606060</color>
+    <color name="resolution_selected">#63caff</color>
+    <color name="resolution_supported">#ffffff</color>
+    <color name="transparent_background">#80ffffff</color>
+    <color name="xiaomi_guide_bg">#1000</color>
+    <color name="action_bar_bg">#0d0e0f</color>
+    <color name="game_item_download_press">#4f8c0e</color>
+    <color name="home_cut_title_tab_color">#1e91eb</color>
+    <color name="multi_delete_menu_seletor_pressed">#0d000000</color>
+    <color name="red_btn_normal">#eb0371</color>
+    <color name="red_btn_select">#d10263</color>
+    <color name="blue_btn_normal">#1e91eb</color>
+    <color name="blue_btn_select">#1b82d1</color>
+    <color name="home_tab_text_color">#9badc7</color>
+    <color name="home_tab_bg_select_color">#1c2430</color>
+    <color name="list_item_select">#0D000000</color>
+    <color name="cache_list_item_select">#F0F0F0</color>
+    <color name="movie_choose_text_bg">#9badc7</color>
+    <color name="cut_line_color">#e5e5e5</color>
+    <color name="sep_line_color">#0d1218</color>
+    <color name="home_actionbar_line_color">#212327</color>
+    <color name="player_actionbar_bg">#cc000000</color>
+    <color name="gif_bkgcolor">#ebebeb</color>
+    <color name="detail_comment_username">#909cae</color>
+    <color name="pay_money_select">#5fa611</color>
+    <color name="progress_bar_green">#71bc1e</color>
+    <color name="apk_list_item_focus">#e6e6e6</color>
+    <color name="black_text_color">#ff040910</color>
+    <color name="white_text_color">#f5f7fa</color>
+    <color name="white_message_text_color">#868d99</color>
+    <color name="game_cut_line_color">#25282c</color>
+    <color name="passowrd_line_cut">#d9d9d9</color>
+
+    <drawable name="taskmanager_innerprogress">@color/taskmanager_state_other</drawable>
+    <drawable name="taskmanager_outerprogress">@color/white_back_ground</drawable>
+
+</resources>

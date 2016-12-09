@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="90dip"
+    android:background="@drawable/seletor_setting_item" >
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="57dip"
+        android:layout_height="57dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dip"
+        android:src="@drawable/game_detail_icon_h324" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="11dip"
+        android:layout_toRightOf="@+id/img_icon"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip" >
+
+            <FrameLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/progress_bg_green_selector"
+                android:clickable="true"
+                android:padding="1dp" >
+
+                <ProgressBar
+                    android:id="@+id/download_progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#f0f0f0"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_pure_green_selector" />
+
+                <TextView
+                    android:id="@+id/btn_download_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/game_download"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/relativeLayout"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textview_appTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/play_record"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textview_appSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="TextView"
+                    android:textColor="@color/message_text_color"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textview_appMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/message_text_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cut_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/line_black"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

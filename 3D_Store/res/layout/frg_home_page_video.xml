@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.runmit.sweedee.view.TriangleLineView
+            android:id="@+id/triangleline"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:lineColor="@color/game_cut_line_color"
+            app:lineHeight="1dp"
+            app:triangleHeight="9dp"
+            app:triangleWidth="16dp" />
+
+        <com.runmit.sweedee.view.PagerSlidingTabStrip
+            android:id="@+id/detail_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/detail_viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

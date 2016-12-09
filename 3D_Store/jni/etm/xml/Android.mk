@@ -1,0 +1,29 @@
+LOCAL_PATH:= $(call my-dir)
+
+MY_C_INCLUDES := \
+		$(LOCAL_PATH)/include/ \
+		$(LOCAL_PATH)/../xl_common/include/
+MY_SRC_FILES := $(wildcard $(LOCAL_PATH)/src/*.c)
+
+MY_SRC_FILES := $(subst jni/etm/xml/, ./, $(MY_SRC_FILES))
+
+MY_CFLAGS := -MD -DLINUX -D_ANDROID_LINUX -DMOBILE_PHONE -DCLOUD_PLAY_PROJ
+
+#release
+#MY_EXTRA_CFLAGS := -O2 -mlong-calls
+#MY_LDLIBS += -lz
+
+#debug
+MY_EXTRA_CFLAGS := -D_LOGGER -D_LOGGER_ANDROID -g -D_DEBUG 
+MY_LDLIBS += -lz -llog
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := xml
+LOCAL_C_INCLUDES += $(MY_C_INCLUDES)
+LOCAL_SRC_FILES := $(MY_SRC_FILES)
+#LOCAL_CFLAGS += $(MY_CFLAGS) $(MY_EXTRA_CFLAGS)
+LOCAL_CFLAGS += $(MY_CFLAGS)
+LOCAL_LDLIBS += $(MY_LDLIBS)
+LOCAL_SHARED_LIBRARIES := superd_common
+#LOCAL_STATIC_LIBRARIES := crypto
+include $(BUILD_SHARED_LIBRARY)

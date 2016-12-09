@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_back_ground"
+    android:orientation="vertical" >
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="@null" >
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/username_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="178dp"
+        android:background="@drawable/user_bg_image"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/gradient_layer" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/head_imgview"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_marginTop="16dip"
+                android:src="@drawable/ic_user" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/show_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_loin_add_regist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/red_btn_selector"
+                    android:minHeight="33dip"
+                    android:minWidth="95dip"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/login_and_regist"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mywallet_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="4dp" >
+
+                <ImageView
+                    android:id="@+id/imageView_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_user_center_cutline"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tv_virtual_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/imageView_line"
+                    android:layout_marginRight="15dp"
+                    android:drawableLeft="@drawable/ic_virtual_money_logo"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="1000.0"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true" />
+                
+                <TextView
+                    android:id="@+id/tv_account_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageView_line"
+                    android:layout_marginLeft="15dp"
+                    android:drawableLeft="@drawable/user_icon_wallet"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:layout_centerVertical="true" />
+                                
+                <Button
+                    android:id="@+id/buttonRecharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="9dip"
+                    android:background="@drawable/button_recharge_selector"
+                    android:gravity="center"
+                    android:text="@string/recharge"
+                    android:textColor="@color/user_recharge_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dip"
+        android:layout_marginRight="9dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/list_bg"
+        android:minHeight="78dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/my_video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/seletor_setting_item"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/movie_divier_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_icon_movie" />
+
+                <TextView
+                    android:id="@+id/my3DMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stereo_movie"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_between_video_game"
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/cut_line_color"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/my_game_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/seletor_setting_item"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_icon_game" />
+
+                <TextView
+                    android:id="@+id/my3DGameBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stereo_game"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/cut_line_color"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/my_apk_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/seletor_setting_item"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_icon_app" />
+
+                <TextView
+                    android:id="@+id/my3DAppBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stereo_app"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_center_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/list_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/payhistory_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/seletor_setting_item"
+            android:minHeight="48dip" >
+
+            <ImageView
+                android:id="@+id/img_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/setting_all_left_padding"
+                android:src="@drawable/user_icon_wallet" />
+
+            <TextView
+                android:id="@+id/my_payhistory"
+                style="@style/text_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_icon2"
+                android:paddingLeft="@dimen/setting_all_distance"
+                android:text="@string/my_wallet"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dip"
+                android:src="@drawable/list_enter" />
+
+            <TextView
+                android:id="@+id/my_wallet_msg"
+                style="@style/text_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow_right"
+                android:paddingLeft="@dimen/setting_all_distance"
+                android:text="@string/my_wallet_msg"
+                android:textColor="@color/message_text_color"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_task_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dip"
+        android:layout_marginRight="9dip"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/list_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/task_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/seletor_setting_item"
+            android:minHeight="48dip" >
+
+            <ImageView
+                android:id="@+id/task_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/setting_all_left_padding"
+                android:src="@drawable/user_icon_download" />
+            <TextView
+                android:id="@+id/my_task"
+                style="@style/text_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="45dp"
+                android:text="@string/taskandupdate"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/my_task_badage"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/my_task_indicator"
+                android:layout_centerVertical="true"
+                android:textSize="16dp" />
+            <ImageView
+                android:id="@id/my_task_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dip"
+                android:src="@drawable/list_enter" />  
+
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/user_setting_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dip"
+        android:layout_marginRight="9dip"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/list_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/setting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/seletor_setting_item"
+            android:minHeight="48dip" >
+
+            <ImageView
+                android:id="@+id/setting_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/setting_all_left_padding"
+                android:src="@drawable/user_icon_setting" />
+
+            <TextView
+                android:id="@+id/my_setting"
+                style="@style/text_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="45dp"
+                android:text="@string/setting"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dip"
+                android:src="@drawable/list_enter" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="9dip"
+        android:layout_marginRight="9dip"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/list_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/user_suggest_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_setting_ltem_selector" >
+
+            <TextView
+                android:id="@+id/user_suggest_text"
+                style="@style/style_setting_left"
+                android:layout_centerVertical="true"
+                android:text="@string/suggest"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="13dip"
+                android:src="@drawable/list_enter" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_black"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/aboutus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_setting_ltem_selector" >
+
+            <TextView
+                android:id="@+id/tv_aboutus"
+                style="@style/style_setting_left"
+                android:layout_centerVertical="true"
+                android:text="@string/aboutus"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="15dip"
+                android:src="@drawable/list_enter" />
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

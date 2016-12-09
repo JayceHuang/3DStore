@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_back_ground"
+    android:orientation="vertical"
+    android:paddingLeft="9dip"
+    android:paddingRight="9dip" >
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip" >
+
+        <LinearLayout
+            android:layout_width="3dip"
+            android:layout_height="15dip"
+            android:background="@color/title_color"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/pay_movie"
+            android:textColor="@color/message_text_color"
+            android:textSize="17dp"
+            android:layout_marginLeft="7dip"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/list_bg"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            android:id="@+id/textview_origin_money"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#6C6966"
+            android:textSize="17sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip" />
+        
+        <TextView
+            android:id="@+id/textview_need_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/textview_origin_money"
+            android:text=""
+            android:textColor="#eb0371"
+            android:textSize="17sp" />
+        
+         <TextView
+            android:id="@+id/textview_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical|left"
+            android:text=""
+            android:textColor="#6C6966"
+            android:textSize="17sp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/textview_need_pay_money" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pay_method_head_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip" >
+
+        <LinearLayout
+            android:layout_width="3dip"
+            android:layout_height="15dip"
+            android:background="@color/title_color"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/payway_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_method"
+            android:textColor="@color/message_text_color"
+            android:textSize="17dp"
+            android:layout_marginLeft="7dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pay_stype_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/list_bg"
+        android:layout_marginTop="10dip">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_order"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/button_green_selector"
+        android:gravity="center"
+        android:text="@string/pay_commit"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="30.5dp"
+    android:background="@color/all_list_background">
+    <!--  android:background="@color/radar_share_user_head"    -->
+    <TextView
+        android:id="@+id/hotplay_login_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:textColor="@color/vod_info_txt_color"
+        android:drawableLeft="@drawable/unlogin"
+        android:drawablePadding="3dip"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:paddingLeft="14dip"
+        android:paddingRight="10dip"
+        style="@style/textview_shadow_style" />
+
+    <TextView
+        android:id="@+id/tv_hotplay_login"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/hotplay_login_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click_login"
+        android:textColor="#33a8ff"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+</RelativeLayout>

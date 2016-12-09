@@ -1,0 +1,133 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontoptimize
+-verbose
+-dontskipnonpubliclibraryclassmembers
+-ignorewarnings
+-dontnote
+-dontwarn
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class * extends android.app.Activity {
+   *;
+}
+
+-keep class com.runmit.sweedee.model.TaskInfo{
+	*;
+}
+
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+
+-keep public class com.runmit.tostore.R$*{
+    public static final int *;
+}
+
+-keep class com.runmit.sweedee.report.sdk.ReportItem{
+	*;
+}
+
+-keep class com.runmit.sweedee.sdk.user.member.task.MemberInfo{
+	*;
+}
+
+-keep class com.runmit.sweedee.action.search.RecommendListObj{
+	*;
+}
+
+-keep class com.runmit.sweedee.player.RealPlayUrlInfo{
+	*;
+}
+
+-keep class com.runmit.sweedee.player.RealPlayUrlLoader{
+	*;
+}
+
+-keep class com.runmit.sweedee.report.sdk.ReportConfig{
+	*;
+}
+
+-keep class com.runmit.sweedee.player.RealPlayUrlLoader$*{
+	<fields>;
+    <methods>;
+}
+
+-keep class com.runmit.sweedee.view.animation.MyStackView$*{
+	<fields>;
+    <methods>;
+}
+
+-keep class com.runmit.sweedee.view.HomeAnimationImageView$*{
+	<fields>;
+    <methods>;
+}
+
+-keep class com.runmit.sweedee.manager.Game3DConfigManager$*{
+	<fields>;
+    <methods>;
+}
+
+-keep class com.runmit.sweedee.downloadinterface.DownloadEngine
+-keepclassmembers class com.runmit.sweedee.downloadinterface.DownloadEngine {
+	public long mTaskId;
+	private java.lang.String fileName;
+		
+	public void jniCall_switchThread(...);
+	public int jniCall_taskStateChanged(...);
+}
+
+-keep class android.content.pm.* {
+	*;
+}
+
+-keep class com.runmit.sweedee.model.** {*;}
+-keep class com.runmit.sweedee.datadao.** {*;}
+-keep class android.support.v4.** {*;}
+-keep class android.support.v7.** {*;}
+-keep class org.apache.**{*;}
+-keep class de.mindpipe.android.logging.log4j.**{*;}
+-keep class org.apache.log4j.**{*;}
+-keep class com.google.xlgson.**{*;}
+-keep class com.alipay.android.app.**{*;}
+-keep class com.unionpay.** {*;}
+-keep class de.greenrobot.dao.** {*;}
+-keep class com.superd.sdsdk.** {*;}
+-keep class com.UCMobile.PayPlugin.** {*;}
+-keep class com.skymobi.pay.** {*;}

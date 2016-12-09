@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lichen.niceslim.MainActivity$PlaceholderFragment"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip">
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/rl_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lly_movie_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black_text_color"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_movie_prevue" />
+
+                <com.runmit.sweedee.view.DirectListView
+                    android:id="@+id/detail_intro_films"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"
+                    android:listSelector="@drawable/gridview_selector"
+                    android:orientation="horizontal" />
+
+
+                <View
+                    android:layout_marginTop="15dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="#cccccc" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/black_text_color"
+                android:lineSpacingExtra="5dp"
+                android:id="@+id/tv_movie_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:singleLine="false"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout> 

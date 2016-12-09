@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.runmit.sweedee.view.animation.PtrFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="@color/black_background"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/searchImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dip"
+                android:src="@drawable/top_bar_ic_search_selector" />
+
+            <ImageView
+                android:id="@+id/userInfoimageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dip"
+                android:src="@drawable/top_bar_ic_user_selector" />
+
+            <ImageView
+                android:id="@+id/userlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/sweedee_logo" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/lineH"
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/home_actionbar_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.runmit.sweedee.view.ImageHomeScrollTabStrip
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_icon_bg_height"
+            android:background="@color/black_background"
+            android:clickable="true"
+            android:orientation="horizontal"
+            app:lineColor="@color/game_cut_line_color"
+            app:lineHeight="1dp"
+            app:triangleHeight="9dp"
+            app:triangleWidth="16dp" >
+
+            <FrameLayout
+                android:id="@+id/home_tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.runmit.sweedee.view.HomeAnimationImageView
+                    android:id="@+id/icon_home_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/ic_home_guide" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/video_tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.runmit.sweedee.view.HomeAnimationImageView
+                    android:id="@+id/icon_video_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/ic_home_video" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/game_tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.runmit.sweedee.view.HomeAnimationImageView
+                    android:id="@+id/icon_game_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/ic_home_game" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/app_tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.runmit.sweedee.view.HomeAnimationImageView
+                    android:id="@+id/icon_app_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/ic_home_app" />
+            </FrameLayout>
+        </com.runmit.sweedee.view.ImageHomeScrollTabStrip>
+
+        <com.runmit.sweedee.view.AnimateViewPager
+            android:id="@+id/detail_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</com.runmit.sweedee.view.animation.PtrFrameLayout>

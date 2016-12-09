@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_newgame_item_logo"
+        android:layout_width="@dimen/app_item_grid_small_width"
+        android:layout_height="@dimen/app_item_grid_small_height"
+        android:scaleType="fitXY"
+        android:src="@drawable/black_game_detail_icon" />
+
+    <TextView
+        android:id="@+id/tv_newgame_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingTop="4dp"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/white_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_hotgame_install_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:gravity="center_horizontal"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/white_message_text_color"
+        android:textSize="12sp"
+        android:layout_marginBottom="15dip" />
+
+</LinearLayout>

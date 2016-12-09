@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+	<ImageView
+	    android:id="@+id/lines"
+	    android:visibility="gone"
+	    android:orientation="vertical" 
+	    android:layout_marginTop="6dp"
+	    android:layout_width="330dp"
+	    android:layout_height="wrap_content"
+	    android:background="@color/black"
+	    android:scaleType="fitXY"
+	    android:src="@drawable/short_movie_item_lines">
+	</ImageView>
+ 	<FrameLayout
+     	android:id="@+id/fly_poster_layout"
+	     android:layout_width="333dp"
+	     android:layout_height="@dimen/movie_type_grid_height" >
+     
+	     <ImageView
+	         android:id="@+id/iv_item_logo"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:layout_marginRight="3dp"
+	         android:scaleType="fitXY"
+	         android:src="@drawable/default_home_movie" />
+
+	     <FrameLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="bottom"
+	         android:layout_marginBottom="-1dp"
+	         android:layout_marginRight="3dp"
+	         android:background="@drawable/bg_video_item_title" >
+
+	         <TextView
+	             android:id="@+id/tv_item_name"
+	             android:layout_width="match_parent"
+	             android:layout_height="wrap_content"
+	             android:layout_gravity="left|bottom"
+	             android:layout_marginBottom="2dp"
+	             android:layout_marginLeft="5dp"
+	             android:singleLine="true"
+	             android:text="test"
+	             android:textColor="@color/white_text_color"
+	             android:textSize="15sp" />
+     	 </FrameLayout>
+
+	     <FrameLayout
+	         android:id="@+id/layout_score"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="bottom|right"
+	         android:background="@drawable/ic_score" >
+
+	         <TextView
+	             android:id="@+id/tv_commend_grade"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_gravity="center"
+	             android:text="0.0"
+	             android:textColor="@color/white_text_color"
+	             android:textSize="13sp" />
+	     </FrameLayout>
+	   
+ 	</FrameLayout>
+
+</LinearLayout>

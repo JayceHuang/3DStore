@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SweeDeeSDK</string>
+
+    <string name="no_found_new_ver">未找到新版本~</string>
+    <string name="is_lattest_ver">您已經安裝了最新版本</string>
+    <string name="no_found_sdcard">sd卡沒有加載！</string>
+    <string name="update_failed">升級失敗，請稍後再試</string>
+    <string name="update_loading">正在升級中 ({0}%)</string>
+    <string name="update_tip_titile">發現新版本:{0}</string>
+    <string name="update_show_msg_f">更新點：\n</string>
+    <string name="update">升級</string>
+    <string name="update_info">升級提示</string>
+    <string name="update_downloading">正在下載,請稍候&#8230;</string>
+    <string name="cancel">取消</string>
+    <string name="update_fetching_msg">正在獲取更新信息,請稍後</string>
+    <string name="ok">確定</string>
+    <string name="update_download_filesize">升級包大小：</string>
+    <string name="download_success_click_install">下載完成，點擊安裝</string>
+    <string name="ignore_current_version">忽略此版本</string>
+</resources>

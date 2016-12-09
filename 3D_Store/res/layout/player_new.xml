@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="false" >
+
+    <com.runmit.sweedee.player.TDGLSurfaceView
+        android:id="@+id/play_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <com.runmit.sweedee.CaptionTextView
+        android:id="@+id/captionTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textColor="@color/white"
+        android:textSize="20dp" >
+    </com.runmit.sweedee.CaptionTextView>
+
+    <LinearLayout
+        android:id="@+id/wait_bar_gnr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:minHeight="108dip"
+        android:minWidth="143dip"
+        android:orientation="vertical"
+        android:paddingLeft="13dip"
+        android:paddingRight="13dip"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/player_progressbar_seletor"
+            android:minHeight="48dip"
+            android:minWidth="48dip" />
+
+        <TextView
+            android:id="@+id/play_speed_gnr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adJustProgressRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/play_floating_layer_bg"
+        android:gravity="center"
+        android:minHeight="108dip"
+        android:minWidth="143dip"
+        android:orientation="vertical"
+        android:paddingLeft="18dip"
+        android:paddingRight="18dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/adJustProgressPlayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="39:45"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/adJustProgressChangeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:text="[+00:15]"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/supreme_adjust"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/adjustPorgressBarVol"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="8dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_vertical" />
+
+        <LinearLayout
+            android:id="@+id/layout_vol_bri_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/play_floating_layer_bg"
+            android:gravity="center"
+            android:minHeight="108dip"
+            android:minWidth="143dip"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/player_midding_padding"
+            android:paddingRight="@dimen/player_midding_padding" >
+
+            <ImageView
+                android:id="@+id/adjustViewIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/adjust_brightness" />
+
+            <ImageView
+                android:id="@+id/iv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:src="@drawable/icon_lock_text" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/adjustPorgressBarBri"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="8dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_vertical" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:src="@drawable/lock_no" />
+
+    <RelativeLayout
+        android:id="@+id/play_view_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/player_header_info"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:layout_alignParentTop="true"
+            android:background="@color/player_actionbar_bg"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/play_back_gnr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/actionbar_back_seletor" />
+
+            <TextView
+                android:id="@+id/play_title_text_gnr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/play_back_gnr"
+                android:ellipsize="end"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:text="@string/fetching_video_name"
+                android:textColor="#ffffffff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/play_open_or_disable3d"
+                android:layout_width="wrap_content"
+                android:minWidth="65dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/player_disable3d_seletor"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:text="@string/open_three_d"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/play_info"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/player_actionbar_bg" >
+
+            <ImageView
+                android:id="@+id/play_start_pause_gnr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/play_start_selector" />
+
+            <Button
+                android:id="@+id/iv_play_video_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="34dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_player_operate_btn"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:text="@string/normal_resolution"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:id="@+id/seek_porgress_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/iv_play_video_mode"
+                android:layout_toRightOf="@+id/play_start_pause_gnr" >
+
+                <SeekBar
+                    android:id="@+id/seek_bar_gnr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxHeight="10dip"
+                    android:minHeight="10dip"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/seek_bar_selector"
+                    android:thumbOffset="15dip" />
+
+                <TextView
+                    android:id="@+id/play_playtime_gnr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginLeft="10dip"
+                    android:text="00:00:00"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/play_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_toRightOf="@+id/play_playtime_gnr"
+                    android:text="/"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/play_playduration_gnr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_toRightOf="@+id/play_space"
+                    android:text="00:00:00"
+                    android:textColor="#666666"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/adJustProgressPlayTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="39:45"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/play_floating_layer_bg"
+        android:gravity="center"
+        android:minHeight="108dip"
+        android:minWidth="143dip"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/player_midding_padding"
+        android:paddingRight="@dimen/player_midding_padding"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_lock_img" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:src="@drawable/icon_lock_text" />
+    </LinearLayout>
+
+</RelativeLayout>

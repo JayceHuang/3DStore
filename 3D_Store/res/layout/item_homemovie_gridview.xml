@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_item_logo"
+            android:layout_width="@dimen/movie_item_grid_width"
+            android:layout_height="@dimen/movie_item_grid_height"
+            android:layout_marginRight="3dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/defalut_movie_small_item" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_score" >
+
+            <TextView
+                android:id="@+id/tv_commend_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="0.0"
+                android:textColor="@color/white_text_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:paddingTop="4dp"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/white_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_highlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingTop="2dp"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/white_message_text_color"
+        android:textSize="12sp" />
+
+</LinearLayout>

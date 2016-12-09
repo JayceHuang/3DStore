@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView_need_pay_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_movie_need_virtual_money_title"
+        android:textColor="@color/black_text_color"
+        android:textSize="16sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/textView_remain_pay_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_movie_need_virtual_money_msg"
+        android:textColor="@color/title_color"
+        android:textSize="16sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" 
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp" />
+
+</LinearLayout>

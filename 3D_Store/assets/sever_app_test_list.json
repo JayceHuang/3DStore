@@ -1,0 +1,42 @@
+{
+    "rtn": 0,
+    "errorMessage": "",
+    "data": {
+        "total": 0,
+        "start": "0",
+        "rows": "20",
+        "length": 0,
+       "list": [
+        {
+            "id": 100,
+            "developerId": 10,
+            "developerTitle": "superD",
+            "title": "天天帝国",
+            "highlight": "卓越的3D体验",
+            "description": "给凯撒、斯巴达克穿上亲手打造的装备，与成千上万的玩家一起战斗吧，掠夺每一个侵犯你的敌人，保卫自己和盟友的家园! 《天天帝国》是全新上线的塔防策略大型多人在线游戏。大作级的画面将玩家传送到罗马时代，率领自己的罗马军团驰骋沙场，打造无坚不摧的罗马帝国。 传说英雄的召唤、军团体系的装备、热血的军号鼓点，使玩家无时不刻沉浸在智慧与实力激烈碰撞的古罗马史诗中，重温罗马传奇的金戈铁马和兄弟盟誓。 八大公测活动火热进行中! 欢迎加入官方一群207367627或贴吧，寻找盟友，分享游戏中的快乐和经验。",
+            "installationTimes": 400,
+            "rate": 4.5,
+            "versionName": "0.2.5",
+            "versionCode": 1,
+            "type": 1,
+            "upgradeMessage": "修复bug1,2,3。新增功能1",
+            "genres": [
+                {
+                    "id": 100,
+                    "title": "游戏"
+                }
+            ],
+            "tags": [
+                "战斗游戏"
+            ],
+            "releaseDate": "2014-11-11",
+            "appUrl": "1-39-h264-3619-aac-64-130970-56895849-0fbfc9458a8de6c625fd9fb27000c9ba-1413959988424.apk",
+            "updateDate": "2014-11-17",
+            "popular": 1,
+            "packageName": "com.zzz.ssss",
+            "fileSize": 10023
+        }
+    ]
+    },
+    "status": "OK"
+}

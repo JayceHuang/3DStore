@@ -1,0 +1,20 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+MY_CFLAGS := -MD -DLINUX -D_ANDROID_LINUX -DMOBILE_PHONE -D_CONNECT_DETAIL 
+MY_EXTRA_CFLAGS := -D_DEBUG -DVERBOSE_ENABLED -D_LOG -D_LOGGER -D_LOGGER_ANDROID  -g
+
+LOCAL_MODULE := mediaserver_jni
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/import/include/mediaserver \
+
+LOCAL_SRC_FILES += com_runmit_mediaserver_MediaServer.c   
+
+LOCAL_CFLAGS += $(MY_CFLAGS) $(MY_EXTRA_CFLAGS)
+
+LOCAL_STATIC_LIBRARIES := libmediaserver
+
+LOCAL_LDLIBS := -lz -llog 
+
+include $(BUILD_SHARED_LIBRARY)

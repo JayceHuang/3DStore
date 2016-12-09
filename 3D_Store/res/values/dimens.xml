@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- 顶部4个图标的背景高度 -->
+    <dimen name="top_icon_bg_height">94dp</dimen>
+    <dimen name="player_midding_padding">10dip</dimen>
+    <dimen name="battery_padding_left">3dip</dimen>
+    <dimen name="battery_padding_right">2dip</dimen>
+    <dimen name="battery_padding_top">2dip</dimen>
+    <dimen name="battery_padding_bottom">2dip</dimen>
+    <dimen name="setting_all_left_padding">12dip</dimen>
+    <dimen name="setting_all_distance">8dip</dimen>
+    <dimen name="actionbar_height">48dip</dimen>
+    <dimen name="movie_item_grid_width">164dp</dimen>
+    <dimen name="movie_item_grid_height">101dp</dimen>
+    <dimen name="app_item_grid_width">107dp</dimen>
+    <dimen name="app_item_grid_height">60dp</dimen>
+    <dimen name="app_item_grid_small_width">72dp</dimen>
+    <dimen name="app_item_grid_small_height">72dp</dimen>
+    <dimen name="movie_type_grid_height">179dp</dimen>
+    <dimen name="movie_detail_item_grid_height">144dp</dimen>
+    <dimen name="movie_refreshgridview_margintop">13dp</dimen>
+    <dimen name="movie_refreshgridview_marginleft">15dp</dimen>
+    <dimen name="movie_catalog_popwindow_offset">1dp</dimen>
+
+</resources>

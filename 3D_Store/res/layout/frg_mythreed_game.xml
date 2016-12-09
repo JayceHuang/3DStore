@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+    
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/local_fragment_space_layout"
+        android:layout_height="1.0dip" >
+
+        <View
+            android:id="@+id/lineH"
+            android:layout_width="match_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/sep_line_color" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/myGame_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/local_fragment_space_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#f0f0f0"
+        android:clipToPadding="false"
+        android:horizontalSpacing="12dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:paddingBottom="27dp"
+        android:paddingTop="27dp"
+        android:scrollbars="none"
+        android:verticalSpacing="12dip" >
+    </GridView>
+
+    <com.runmit.sweedee.view.EmptyView
+        android:id="@+id/rl_empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/local_fragment_space_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

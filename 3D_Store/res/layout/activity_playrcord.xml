@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/father_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:background="@color/white_back_ground" >
+        
+        <ListView
+	        android:id="@+id/frg_playrecord_lv"
+	        android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@+id/operate_layout"
+	        android:clipToPadding="false"
+	        android:paddingTop="13dp"
+	        android:divider="#00000000"
+			android:dividerHeight="0dip"
+	        android:scrollbars="none"/>
+
+        <com.runmit.sweedee.view.EmptyView
+            android:id="@+id/rl_empty_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/operate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            layout="@layout/download_multi_popup"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>
