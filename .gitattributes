@@ -1,0 +1,3 @@
+# Prevent /bin/sh scripts from being clobbered by autocrlf=true
+*.h linguist-language=java  
+*.c linguist-language=java  
