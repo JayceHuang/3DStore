@@ -1,6 +1,8 @@
-1.ĞèÒª½«3D_StoreÍ¬¼¶Ä¿Â¼µÄOptimizationSKAndroidPayResÌí¼Óµ½IDEÖĞ£¬È»ºóimportLibrary
+1.éœ€è¦å°†3D_StoreåŒçº§ç›®å½•çš„OptimizationSKAndroidPayResæ·»åŠ åˆ°IDEä¸­ï¼Œç„¶åimportLibrary
 
-2.Ê×´ÎÏÂÔØ´úÂëºóÇëÏÈÅäÖÃeclipse »·¾³
+2.é¦–æ¬¡ä¸‹è½½ä»£ç åè¯·å…ˆé…ç½®eclipse ç¯å¢ƒ
   
-  ½« 3D_Store/eclipseSettings/.classpath ÎÄ¼ş·ÅÈë 3D_Store/ ÏÂ
-  ½« 3D_Store/eclipseSettings/project.properties ÎÄ¼ş·ÅÈë 3D_Store/ ÏÂ
+  å°† 3D_Store/eclipseSettings/.classpath æ–‡ä»¶æ”¾å…¥ 3D_Store/ ä¸‹
+  å°† 3D_Store/eclipseSettings/project.properties æ–‡ä»¶æ”¾å…¥ 3D_Store/ ä¸‹
+  
+  ![image](https://github.com/ShibinHuang/HomeAnimationImageView/blob/master/homeanimview.gif)
